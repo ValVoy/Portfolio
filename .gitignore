@@ -1,0 +1,30 @@
+# Dépendances
+app/node_modules/
+app/.pnp
+app/.pnp.*
+app/.yarn/*
+!app/.yarn/patches
+!app/.yarn/releases
+!app/.yarn/sdks
+!app/.yarn/versions
+
+# Build Next.js
+app/.next/
+app/out/
+
+# Environnement
+app/.env
+app/.env.*
+!app/.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
