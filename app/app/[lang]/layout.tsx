@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import { Header } from '@/components/layout/Header'
+import { Footer } from '@/components/layout/Footer'
 
 const locales = ['fr', 'en'] as const
 export type Locale = (typeof locales)[number]
@@ -39,5 +41,11 @@ export default async function LocaleLayout({
 
   if (!locales.includes(lang as Locale)) notFound()
 
-  return <>{children}</>
+  return (
+    <>
+      <Header lang={lang} />
+      <div className="pt-16">{children}</div>
+      <Footer lang={lang} />
+    </>
+  )
 }

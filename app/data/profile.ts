@@ -13,7 +13,7 @@ export const profile: Profile = {
    * TODO : rédiger la bio définitive.
    * Pistes : parcours THP, appétence pour le front-end, projets marquants, ce qui t'anime.
    */
-  bio: 'Développeur web junior formé à The Hacking Project, passionné par la création d'interfaces soignées et d'applications utiles. À l'aise aussi bien en Ruby on Rails qu'en HTML/CSS, je construis des produits du backend jusqu'au pixel.',
+  bio: "Développeur web junior formé à The Hacking Project, passionné par la création d'interfaces soignées et d'applications utiles. À l'aise aussi bien en Ruby on Rails qu'en HTML/CSS, je construis des produits du backend jusqu'au pixel.",
   location: 'France',
   social: [
     {
