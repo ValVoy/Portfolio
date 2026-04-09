@@ -1,16 +1,12 @@
 import { profile } from '@/data/profile'
-
-const translations = {
-  fr: { rights: 'Tous droits réservés' },
-  en: { rights: 'All rights reserved' },
-} as const
+import type { Dictionary } from '@/data/i18n/fr'
 
 interface FooterProps {
   lang: string
+  footer: Dictionary['footer']
 }
 
-export function Footer({ lang }: FooterProps) {
-  const t = translations[lang as keyof typeof translations] ?? translations.fr
+export function Footer({ footer }: FooterProps) {
   const github = profile.social.find((s) => s.platform === 'github')
   const linkedin = profile.social.find((s) => s.platform === 'linkedin')
 
@@ -47,7 +43,7 @@ export function Footer({ lang }: FooterProps) {
         </ul>
 
         <p className="font-body text-on-surface-variant text-xs">
-          © {new Date().getFullYear()} {profile.name} — {t.rights}
+          © {new Date().getFullYear()} {profile.name} — {footer.rights}
         </p>
       </div>
     </footer>

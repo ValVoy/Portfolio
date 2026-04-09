@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import { getDictionary, hasLocale } from '@/data/i18n'
+import { Hero } from '@/components/sections/Hero'
 
 export default async function Home({ params }: PageProps<'/[lang]'>) {
   const { lang } = await params
@@ -9,10 +10,8 @@ export default async function Home({ params }: PageProps<'/[lang]'>) {
   const dict = await getDictionary(lang)
 
   return (
-    <main className="flex flex-1 items-center justify-center">
-      <p className="font-body text-on-surface-variant text-sm tracking-widest uppercase">
-        {dict.home.tagline}
-      </p>
+    <main>
+      <Hero lang={lang} hero={dict.hero} />
     </main>
   )
 }

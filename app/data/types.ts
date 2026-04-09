@@ -1,3 +1,5 @@
+export type LocalizedString = { fr: string; en: string }
+
 export type ProjectStatus = 'completed' | 'in_progress' | 'archived'
 
 export type ProjectRole = 'fullstack' | 'frontend' | 'backend' | 'lead'
@@ -5,8 +7,8 @@ export type ProjectRole = 'fullstack' | 'frontend' | 'backend' | 'lead'
 export interface Project {
   id: string
   title: string
-  description: string
-  longDescription: string
+  description: LocalizedString
+  longDescription: LocalizedString
   stack: string[]
   role: ProjectRole
   status: ProjectStatus
@@ -34,8 +36,8 @@ export interface SocialLink {
 
 export interface Profile {
   name: string
-  title: string
-  bio: string
+  title: LocalizedString
+  bio: LocalizedString
   location: string
   social: SocialLink[]
 }

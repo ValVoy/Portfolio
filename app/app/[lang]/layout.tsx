@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import { getDictionary } from '@/data/i18n'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 
@@ -41,11 +42,13 @@ export default async function LocaleLayout({
 
   if (!locales.includes(lang as Locale)) notFound()
 
+  const dict = await getDictionary(lang as Locale)
+
   return (
     <>
-      <Header lang={lang} />
+      <Header lang={lang} nav={dict.nav} />
       <div className="pt-16">{children}</div>
-      <Footer lang={lang} />
+      <Footer lang={lang} footer={dict.footer} />
     </>
   )
 }

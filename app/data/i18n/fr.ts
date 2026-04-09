@@ -2,6 +2,11 @@ export const fr = {
   home: {
     tagline: 'Portfolio — en construction',
   },
+  hero: {
+    cta: 'Voir mes projets',
+    ctaSecondary: 'Me contacter',
+    availability: 'Disponible pour de nouvelles opportunités',
+  },
   nav: {
     projects: 'Projets',
     about: 'À propos',

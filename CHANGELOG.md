@@ -19,3 +19,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Centralized translation system in `app/data/i18n`.
 - Moved `/governance` directory to project root for better separation of concerns.
 - Cleaned up duplicate configuration files in the `/app` directory.
+
+## [0.2.0] - 2026-04-09
+
+### Added
+- **Phase 1:** Real project data integration (4 projects, 14 skills, full profile).
+- **Phase 2:** Core UI component library (`Button`, `Card`, `Chip`) with Kinetic Luminescence styling.
+- **Phase 3:** Global layout components (`Header`, `Footer`) with language switcher and Glassmorphism.
+- TypeScript strict typings for all data models.
+- Environment variable support for sensitive contact info.
+- New audit report (#04) validating architecture and UI.

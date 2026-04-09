@@ -4,10 +4,14 @@ export const projects: Project[] = [
   {
     id: 'kois-story',
     title: "Koï's Story",
-    description:
-      'Vitrine digitale pour une élevage de carpes koï de la lignée Konishi — catalogue filtrable, fiche produit, commande via WhatsApp et back-office admin.',
-    longDescription:
-      "Projet de fin de formation The Hacking Project. Plateforme de présentation et de prise de commande pour un élevage de carpes koï affilié à la lignée Konishi. Les visiteurs peuvent parcourir le catalogue, filtrer par variété, taille ou prix, et contacter le vendeur directement via WhatsApp en un clic. Comprend un back-office complet pour la gestion des koïs et des messages.",
+    description: {
+      fr: "Vitrine digitale pour un élevage de carpes koï de la lignée Konishi — catalogue filtrable, fiche produit, commande via WhatsApp et back-office admin.",
+      en: "Digital showcase for a Konishi-lineage koi carp farm — filterable catalogue, product page, WhatsApp ordering and admin back-office.", // TODO Phase 7
+    },
+    longDescription: {
+      fr: "Projet de fin de formation The Hacking Project. Plateforme de présentation et de prise de commande pour un élevage de carpes koï affilié à la lignée Konishi. Les visiteurs peuvent parcourir le catalogue, filtrer par variété, taille ou prix, et contacter le vendeur directement via WhatsApp en un clic. Comprend un back-office complet pour la gestion des koïs et des messages.",
+      en: "End-of-training project at The Hacking Project. A presentation and ordering platform for a Konishi-lineage koi carp farm. Visitors can browse the catalogue, filter by variety, size or price, and contact the seller directly via WhatsApp in one click. Includes a full back-office for managing koi listings and messages.", // TODO Phase 7
+    },
     stack: ['Ruby on Rails', 'Hotwire', 'Turbo', 'Stimulus', 'SQLite', 'Devise', 'HTML', 'CSS'],
     role: 'frontend',
     status: 'in_progress',
@@ -20,10 +24,14 @@ export const projects: Project[] = [
   {
     id: 'chatbot-openai',
     title: 'Chatbot OpenAI',
-    description:
-      'Chatbot en Ruby intégrant l'API OpenAI — entrée utilisateur en ligne de commande, réponses générées par GPT.',
-    longDescription:
-      'Projet réalisé durant la formation THP. Intégration de l'API OpenAI dans un script Ruby permettant de dialoguer avec un modèle GPT directement depuis le terminal. Gestion de la clé API, formatage des prompts et affichage des réponses.',
+    description: {
+      fr: "Chatbot en Ruby intégrant l'API OpenAI — entrée utilisateur en ligne de commande, réponses générées par GPT.",
+      en: "Ruby chatbot integrating the OpenAI API — command-line user input, GPT-generated responses.", // TODO Phase 7
+    },
+    longDescription: {
+      fr: "Projet réalisé durant la formation THP. Intégration de l'API OpenAI dans un script Ruby permettant de dialoguer avec un modèle GPT directement depuis le terminal. Gestion de la clé API, formatage des prompts et affichage des réponses.",
+      en: "Project built during the THP training. Integration of the OpenAI API into a Ruby script enabling conversation with a GPT model directly from the terminal. Handles API key management, prompt formatting and response display.", // TODO Phase 7
+    },
     stack: ['Ruby', 'OpenAI API'],
     role: 'fullstack',
     status: 'completed',
@@ -35,10 +43,14 @@ export const projects: Project[] = [
   {
     id: 'crazy-scrap',
     title: 'Crazy Scrap',
-    description:
-      'Scraper Ruby capable de collecter et structurer des données depuis des pages web cibles.',
-    longDescription:
-      'Projet de web scraping réalisé durant la formation THP. Le script Ruby collecte des données structurées depuis des pages web, les parse et les exporte dans un format exploitable. Utilisation de Nokogiri pour le parsing HTML.',
+    description: {
+      fr: "Scraper Ruby capable de collecter et structurer des données depuis des pages web cibles.",
+      en: "Ruby scraper that collects and structures data from target web pages.", // TODO Phase 7
+    },
+    longDescription: {
+      fr: "Projet de web scraping réalisé durant la formation THP. Le script Ruby collecte des données structurées depuis des pages web, les parse et les exporte dans un format exploitable. Utilisation de Nokogiri pour le parsing HTML.",
+      en: "Web scraping project built during the THP training. The Ruby script collects structured data from web pages, parses it and exports it in a usable format. Uses Nokogiri for HTML parsing.", // TODO Phase 7
+    },
     stack: ['Ruby', 'Nokogiri'],
     role: 'fullstack',
     status: 'completed',
@@ -50,10 +62,14 @@ export const projects: Project[] = [
   {
     id: 'freedoc',
     title: 'FreeDoc',
-    description:
-      'Application Ruby de gestion de documents — premier projet full-stack avec modèles, vues et persistance.',
-    longDescription:
-      'Projet full-stack réalisé durant la formation THP. Application de gestion de documents permettant la création, consultation et organisation de fichiers. Premier projet structuré avec séparation des responsabilités (modèles, vues, logique métier) et persistance des données.',
+    description: {
+      fr: "Application Ruby de gestion de documents — premier projet full-stack avec modèles, vues et persistance.",
+      en: "Ruby document management app — first full-stack project with models, views and data persistence.", // TODO Phase 7
+    },
+    longDescription: {
+      fr: "Projet full-stack réalisé durant la formation THP. Application de gestion de documents permettant la création, consultation et organisation de fichiers. Premier projet structuré avec séparation des responsabilités (modèles, vues, logique métier) et persistance des données.",
+      en: "Full-stack project built during the THP training. A document management application enabling file creation, viewing and organisation. First structured project with separation of concerns (models, views, business logic) and data persistence.", // TODO Phase 7
+    },
     stack: ['Ruby', 'Sinatra', 'HTML', 'CSS'],
     role: 'fullstack',
     status: 'completed',

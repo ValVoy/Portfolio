@@ -1,16 +1,12 @@
 import Link from 'next/link'
-
-const translations = {
-  fr: { projects: 'Projets', about: 'À propos', contact: 'Contact', langSwitch: 'EN' },
-  en: { projects: 'Projects', about: 'About', contact: 'Contact', langSwitch: 'FR' },
-} as const
+import type { Dictionary } from '@/data/i18n/fr'
 
 interface HeaderProps {
   lang: string
+  nav: Dictionary['nav']
 }
 
-export function Header({ lang }: HeaderProps) {
-  const t = translations[lang as keyof typeof translations] ?? translations.fr
+export function Header({ lang, nav }: HeaderProps) {
   const otherLang = lang === 'fr' ? 'en' : 'fr'
 
   return (
@@ -34,7 +30,7 @@ export function Header({ lang }: HeaderProps) {
               href={`/${lang}#projects`}
               className="font-body text-on-surface-variant text-sm hover:text-on-surface transition-colors duration-200"
             >
-              {t.projects}
+              {nav.projects}
             </Link>
           </li>
           <li>
@@ -42,7 +38,7 @@ export function Header({ lang }: HeaderProps) {
               href={`/${lang}#about`}
               className="font-body text-on-surface-variant text-sm hover:text-on-surface transition-colors duration-200"
             >
-              {t.about}
+              {nav.about}
             </Link>
           </li>
           <li>
@@ -50,7 +46,7 @@ export function Header({ lang }: HeaderProps) {
               href={`/${lang}#contact`}
               className="font-body text-on-surface-variant text-sm hover:text-on-surface transition-colors duration-200"
             >
-              {t.contact}
+              {nav.contact}
             </Link>
           </li>
           <li>
@@ -59,7 +55,7 @@ export function Header({ lang }: HeaderProps) {
               className="font-body text-primary-fixed-dim text-xs font-medium uppercase tracking-[0.1em] hover:text-primary transition-colors duration-200"
               aria-label={lang === 'fr' ? 'Switch to English' : 'Passer en français'}
             >
-              {t.langSwitch}
+              {nav.langSwitch}
             </Link>
           </li>
         </ul>
