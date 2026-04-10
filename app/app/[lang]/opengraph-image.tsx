@@ -4,8 +4,9 @@ export const runtime = 'edge'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
-export default function OgImage({ params }: { params: { lang: string } }) {
-  const isFr = params.lang === 'fr'
+export default async function OgImage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params
+  const isFr = lang === 'fr'
 
   return new ImageResponse(
     (
