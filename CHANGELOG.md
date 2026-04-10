@@ -26,6 +26,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Phase 1:** Real project data integration (4 projects, 14 skills, full profile).
 - **Phase 2:** Core UI component library (`Button`, `Card`, `Chip`) with Kinetic Luminescence styling.
 - **Phase 3:** Global layout components (`Header`, `Footer`) with language switcher and Glassmorphism.
-- TypeScript strict typings for all data models.
+- **Phase 4 (Partial):** `Hero` section with availability badge, dynamic bio, and primary/tertiary CTAs.
+- TypeScript strict typings for all data models, including new `LocalizedString` for full i18n data support.
 - Environment variable support for sensitive contact info.
-- New audit report (#04) validating architecture and UI.
+- New audit reports (#04, #05) validating architecture, i18n consistency, and UI fidelity.
+
+### Fixed
+- **i18n:** Centralized all UI strings in `data/i18n/` (Header/Footer no longer use hardcoded translations).
+- **Dev Experience:** Fixed HMR/Hot Reload on Windows by enabling Webpack polling.
+- **UI:** Extended `Button` component to support both `button` and `anchor` elements with strict typing.

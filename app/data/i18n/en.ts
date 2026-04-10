@@ -19,4 +19,31 @@ export const en: Dictionary = {
     madeWith: 'Made with',
     rights: 'All rights reserved',
   },
+  projects: {
+    title: 'Projects',
+    subtitle: 'A selection of recent work',
+    statusInProgress: 'In progress',
+    statusCompleted: 'Completed',
+    team: 'Team',
+    solo: 'Solo',
+    viewCode: 'Source code',
+    viewLive: 'Live demo',
+  },
+  about: {
+    title: 'About',
+    subtitle: 'My background & skills',
+    formation: 'Education',
+    formationDetail: 'The Hacking Project — Fullstack web developer',
+    location: 'Location',
+    skills: {
+      language: 'Languages',
+      framework: 'Frameworks & Libraries',
+      tool: 'Tools',
+    },
+  },
+  contact: {
+    title: 'Contact',
+    subtitle: 'Have a project or an opportunity? I am available.',
+    cta: 'Send me an email',
+  },
 }

@@ -48,7 +48,7 @@ export default async function LocaleLayout({
     <>
       <Header lang={lang} nav={dict.nav} />
       <div className="pt-16">{children}</div>
-      <Footer lang={lang} footer={dict.footer} />
+      <Footer footer={dict.footer} />
     </>
   )
 }

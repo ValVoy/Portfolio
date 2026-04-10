@@ -11,9 +11,10 @@ export function Header({ lang, nav }: HeaderProps) {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-[24px]"
+      className="fixed top-0 left-0 right-0 z-50"
       style={{
-        background: 'color-mix(in srgb, var(--color-surface-variant) 60%, transparent)',
+        background: 'color-mix(in srgb, var(--color-surface-container) 97%, transparent)',
+        borderBottom: '1px solid color-mix(in srgb, var(--color-outline-variant) 30%, transparent)',
       }}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
