@@ -36,22 +36,41 @@ Phase 4 (suite) :
 
 ## Features livrées
 
-_(à compléter en cours de session)_
+- **i18n** : clés `projects`, `about`, `contact` ajoutées dans `fr.ts` et `en.ts`
+- **`ProjectCard.tsx`** : card avec hover lift (Framer Motion), status badge, stack chips, liens repo/démo
+- **`Projects.tsx`** : grille 1→2→3 colonnes, stagger 0.2s, scale 0.94→1, easing custom
+- **`About.tsx`** : bio + facts (formation, localisation) + skill bars en grid 2 colonnes, animées au scroll
+- **`Contact.tsx`** : liens GitHub / LinkedIn / Email avec icônes SVG inline (objet `platformIcons`)
+- **`page.tsx`** : 4 sections branchées avec props depuis le server component
+- **Fix structure sections** : `section` full-width, `max-w-6xl` uniquement sur le div contenu (suppression effet "cadre")
+- **Fix Header** : remplacement `backdrop-blur` + `color-mix` par fond solide `surface-container` 97% — suppression artefacts GPU au survol barre favoris navigateur
+- **Footer simplifié** : copyright uniquement, suppression doublons GitHub/LinkedIn (déjà dans Contact)
 
 ---
 
 ## Décisions techniques prises
 
-_(à compléter)_
+- **`once: true` sur toutes les animations** : testé `once: false` (reverse au scroll), effet jugé désagréable (contenu disparaît en remontant) → retour à `once: true`
+- **`backdrop-filter` retiré du Header** : artefact GPU Chromium non résolvable via `will-change` seul, fond solide plus fiable
+- **`platformIcons` comme objet de constantes** plutôt que composant `PlatformIcon` interne → respect règle "un composant = un fichier"
+- **Skills en grid 2 colonnes** : réduit la hauteur de la section About de ~50%
 
 ---
 
 ## Incidents & résolutions
 
-_(à compléter)_
+| Problème | Cause | Solution |
+|---|---|---|
+| Effet "cadre" visible autour des sections | `max-w-6xl` sur la balise `section` elle-même, clippant les glows | Séparation section (full-width) / div contenu (max-w-6xl) |
+| Artefacts visuels sur la navbar | `backdrop-filter: blur` + `color-mix` instable sur GPU Chromium/Windows | Remplacement par fond solide |
+| Violation "un composant = un fichier" | `PlatformIcon` écrit comme composant React interne dans Contact.tsx | Refactorisé en objet `platformIcons: Record<platform, ReactNode>` |
 
 ---
 
 ## Prochaines étapes
 
-_(à compléter en fin de session)_
+1. SEO : `metadata` par page, `og:image`, JSON-LD
+2. Pages de détail projets (MDX)
+3. `sitemap.xml` et `robots.txt` dynamiques
+4. Polissage final : traductions EN (TODO Phase 7), responsive mobile
+5. Audit Gemini de fin de session

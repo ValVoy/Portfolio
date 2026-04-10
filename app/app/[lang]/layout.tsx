@@ -15,21 +15,45 @@ export async function generateMetadata({
   params,
 }: LayoutProps<'/[lang]'>): Promise<Metadata> {
   const { lang } = await params
+  const isFr = lang === 'fr'
+
+  const title = isFr
+    ? 'Valentin Chéron — Développeur web fullstack junior'
+    : 'Valentin Chéron — Junior fullstack web developer'
+  const description = isFr
+    ? 'Portfolio de Valentin Chéron, développeur web fullstack junior formé à The Hacking Project. Ruby on Rails, Next.js, TypeScript.'
+    : 'Portfolio of Valentin Chéron, junior fullstack web developer trained at The Hacking Project. Ruby on Rails, Next.js, TypeScript.'
+
   return {
     title: {
-      default: 'Portfolio',
-      template: '%s | Portfolio',
+      default: title,
+      template: `%s | Valentin Chéron`,
     },
-    description:
-      lang === 'fr'
-        ? 'Portfolio personnel — développeur fullstack.'
-        : 'Personal portfolio — fullstack developer.',
+    description,
     metadataBase: new URL('https://portfolio.vercel.app'),
     alternates: {
       languages: {
         fr: '/fr',
         en: '/en',
       },
+    },
+    openGraph: {
+      type: 'website',
+      locale: isFr ? 'fr_FR' : 'en_US',
+      alternateLocale: isFr ? 'en_US' : 'fr_FR',
+      url: `https://portfolio.vercel.app/${lang}`,
+      siteName: 'Valentin Chéron',
+      title,
+      description,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+    robots: {
+      index: true,
+      follow: true,
     },
   }
 }

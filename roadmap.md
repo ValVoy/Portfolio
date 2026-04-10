@@ -45,22 +45,22 @@
 - [x] `Footer` : liens GitHub/LinkedIn, copyright dynamique
 - [x] Root layout : `<html>` + `<body>` + polices dans `app/layout.tsx`
 
-### Phase 4 — Sections de page 🔄 En cours
+### Phase 4 — Sections de page ✅
 
 - [x] **Fix i18n** : traductions Header/Footer centralisées dans `fr.ts`/`en.ts`
 - [x] **Fix i18n données** : `LocalizedString` pour `description`, `longDescription`, `title`, `bio` — helper `t()` dans `lib/i18n.ts`
 - [x] `sections/Hero.tsx` : badge disponibilité, nom, titre, bio, CTA primaire + tertiaire
-- [ ] `sections/Projects.tsx` : grille de ProjectCard avec les vraies données
-- [ ] `sections/ProjectCard.tsx` : card projet avec stack (Chips), rôle, lien
-- [ ] `sections/About.tsx` : bio + compétences avec barres de niveau
-- [ ] `sections/Contact.tsx` : liens sociaux + email (mailto)
-- [ ] Animations Framer Motion : entrées de section au scroll
+- [x] `sections/Projects.tsx` : grille 3 colonnes, stagger Framer Motion, animations scroll
+- [x] `sections/ProjectCard.tsx` : card avec status badge, stack (Chips), liens repo/démo
+- [x] `sections/About.tsx` : bio + compétences en grille 2 colonnes avec barres animées
+- [x] `sections/Contact.tsx` : liens GitHub / LinkedIn / Email avec icônes SVG
+- [x] Navigation mobile : hamburger animé, menu déroulant Framer Motion
 
-### Phase 5 — SEO & Performance 📋 À venir
-- [ ] Métadonnées par page (`export const metadata`) : title, description
-- [ ] `og:image` et `twitter:card` sur toutes les pages
-- [ ] JSON-LD sur la page d'accueil et les pages projets
-- [ ] `robots.txt` et `sitemap.xml` dynamiques
+### Phase 5 — SEO & Performance 🔄 En cours
+- [x] Métadonnées complètes (`title`, `description`, `openGraph`, `twitter:card`, `robots`)
+- [x] `og:image` générée dynamiquement via `ImageResponse` (1200×630, bilingue)
+- [x] JSON-LD `Person` schema sur la page d'accueil
+- [x] `robots.txt` et `sitemap.xml` dynamiques avec hreflang FR/EN
 - [ ] Score Lighthouse 95+ sur les 4 critères
 - [ ] Toutes les images en WebP/AVIF via `next/image`
 
@@ -81,7 +81,8 @@
 ### Phase 8 — Déploiement 📋 À venir
 - [ ] Créer le repo GitHub (public ou privé)
 - [ ] Connecter à Vercel
-- [ ] Configurer les variables d'environnement sur Vercel
+- [ ] Configurer les variables d'environnement sur Vercel (`NEXT_PUBLIC_CONTACT_EMAIL`)
+- [ ] **Remplacer `https://portfolio.vercel.app` par la vraie URL** dans `layout.tsx`, `page.tsx`, `sitemap.ts`, `robots.ts`
 - [ ] Domaine personnalisé (si applicable)
 - [ ] Vérification finale Lighthouse en production
 
