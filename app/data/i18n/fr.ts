@@ -44,6 +44,14 @@ export const fr = {
     subtitle: "Vous avez un projet ou une opportunité\u00a0? Je suis disponible.",
     cta: "M'écrire un email",
   },
+  project: {
+    back: '← Retour aux projets',
+    roleLabel: 'Rôle',
+    typeLabel: 'Type',
+    yearLabel: 'Année',
+    openRepo: 'Code source',
+    openLive: 'Voir la démo',
+  },
 } as const
 
 export type Dictionary = typeof fr

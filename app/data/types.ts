@@ -14,6 +14,8 @@ export interface Project {
   status: ProjectStatus
   repoUrl: string
   liveUrl?: string
+  /** Chemin relatif depuis /public, ex: "/projects/kois-story.webp" */
+  image?: string
   teamProject: boolean
   featured: boolean
   year: number

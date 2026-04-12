@@ -2,7 +2,9 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
+import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import type { Dictionary } from '@/data/i18n/fr'
 
 interface HeaderProps {
@@ -18,18 +20,21 @@ const navLinks = (lang: string, nav: Dictionary['nav']) => [
 
 export function Header({ lang, nav }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
   const otherLang = lang === 'fr' ? 'en' : 'fr'
+  // Remplace le segment de langue dans l'URL courante → /fr/projects/x → /en/projects/x
+  const otherLangHref = pathname.replace(new RegExp(`^/${lang}`), `/${otherLang}`)
   const links = navLinks(lang, nav)
 
   return (
     <header
       className="fixed top-0 left-0 right-0 z-50"
       style={{
-        background: 'color-mix(in srgb, var(--color-surface-container) 97%, transparent)',
+        background: 'color-mix(in srgb, var(--color-nav-bg) 97%, transparent)',
         borderBottom: '1px solid color-mix(in srgb, var(--color-outline-variant) 30%, transparent)',
       }}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <nav aria-label="Navigation principale" className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         {/* Logo */}
         <Link
           href={`/${lang}`}
@@ -53,12 +58,15 @@ export function Header({ lang, nav }: HeaderProps) {
           ))}
           <li>
             <Link
-              href={`/${otherLang}`}
+              href={otherLangHref}
               className="font-body text-primary-fixed-dim text-xs font-medium uppercase tracking-[0.1em] hover:text-primary transition-colors duration-200"
               aria-label={lang === 'fr' ? 'Switch to English' : 'Passer en français'}
             >
               {nav.langSwitch}
             </Link>
+          </li>
+          <li>
+            <ThemeToggle />
           </li>
         </ul>
 
@@ -68,6 +76,7 @@ export function Header({ lang, nav }: HeaderProps) {
           onClick={() => setIsOpen((v) => !v)}
           aria-label={isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
           aria-expanded={isOpen}
+          aria-controls="mobile-nav"
         >
           <motion.span
             animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
@@ -94,6 +103,7 @@ export function Header({ lang, nav }: HeaderProps) {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            id="mobile-nav"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -117,13 +127,16 @@ export function Header({ lang, nav }: HeaderProps) {
               ))}
               <li className="pt-2 mt-1" style={{ borderTop: '1px solid color-mix(in srgb, var(--color-outline-variant) 20%, transparent)' }}>
                 <Link
-                  href={`/${otherLang}`}
+                  href={otherLangHref}
                   className="font-body text-primary-fixed-dim text-xs font-medium uppercase tracking-[0.1em] hover:text-primary transition-colors duration-200 block py-3"
                   aria-label={lang === 'fr' ? 'Switch to English' : 'Passer en français'}
                   onClick={() => setIsOpen(false)}
                 >
                   {nav.langSwitch}
                 </Link>
+              </li>
+              <li className="py-2">
+                <ThemeToggle />
               </li>
             </ul>
           </motion.div>

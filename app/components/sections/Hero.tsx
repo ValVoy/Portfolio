@@ -26,7 +26,7 @@ export function Hero({ lang, hero }: HeroProps) {
         <div className="mb-8 inline-flex items-center gap-2">
           <span
             aria-hidden="true"
-            className="h-2 w-2 rounded-full bg-primary animate-pulse"
+            className="h-2 w-2 rounded-full bg-primary motion-safe:animate-pulse"
           />
           <span className="font-body text-xs uppercase tracking-[0.1em] text-primary">
             {hero.availability}

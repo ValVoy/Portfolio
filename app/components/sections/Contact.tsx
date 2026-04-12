@@ -51,13 +51,13 @@ const itemVariants = {
 export function Contact({ social, dict }: ContactProps) {
   return (
     <section id="contact" className="relative w-full py-[160px]">
-      {/* Ambient glow — full viewport width */}
+      {/* Ambient glow — ellipse réduite pour ne pas déborder sur les sections adjacentes */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 50% 40% at 80% 50%, color-mix(in srgb, var(--color-primary) 5%, transparent), transparent)',
+            'radial-gradient(ellipse 35% 30% at 80% 50%, color-mix(in srgb, var(--color-glow-ambient) 8%, transparent), transparent)',
         }}
       />
 

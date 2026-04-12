@@ -2,8 +2,8 @@
 
 **Date :** 10-04-2026
 **Auteur :** Claude (Lead Developer)
-**Statut :** Terminée ✅
-**Commits :** `c74f0cf`, `3dce910`
+**Statut :** Terminée + auditée ✅
+**Commits :** `c74f0cf`, `3dce910`, `b395a33`
 
 ---
 
@@ -99,6 +99,14 @@ app/
 4. **Animations `once: true`** : pas de `margin` sur certains `viewport` — vérifier que les éléments en bas de page ne s'animent pas trop tôt
 5. **Traductions EN** : toujours marquées `// TODO Phase 7` dans `projects.ts` et `profile.ts`
 6. **URL placeholder** : `https://portfolio.vercel.app` partout — à remplacer au déploiement
+
+---
+
+## Audit Gemini #06 — Résultat
+
+**Statut :** CONFORME ✅
+**Fix appliqué en session :** `params` async dans `opengraph-image.tsx` → commit `b395a33`
+**Audit déjà traité** — la prochaine session n'a pas besoin de relire `06_audit_session_4.md`.
 
 ---
 

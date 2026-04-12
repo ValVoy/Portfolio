@@ -1,7 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { Chip } from '@/components/ui/Chip'
+import { ProjectImage } from '@/components/ui/ProjectImage'
 import { t } from '@/lib/i18n'
 import type { Project } from '@/data/types'
 import type { Dictionary } from '@/data/i18n/fr'
@@ -17,13 +19,18 @@ export function ProjectCard({ project, lang, dict }: ProjectCardProps) {
     <motion.article
       whileHover={{ y: -6 }}
       transition={{ duration: 0.2, ease: 'easeOut' }}
-      className="flex h-full flex-col p-8"
+      className="flex h-full flex-col overflow-hidden"
       style={{
         backgroundColor: 'var(--color-surface-container)',
         borderRadius: '1.5rem',
         boxShadow: '0 4px 32px color-mix(in srgb, var(--color-primary) 6%, transparent)',
       }}
     >
+      {/* Thumbnail */}
+      <ProjectImage image={project.image} title={project.title} variant="card" />
+
+      {/* Content */}
+      <div className="flex flex-1 flex-col p-8">
       {/* Top: status + year */}
       <div className="mb-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
@@ -60,11 +67,14 @@ export function ProjectCard({ project, lang, dict }: ProjectCardProps) {
       </div>
 
       {/* Title */}
-      <h3
-        className="font-display mb-3 text-xl font-bold"
-        style={{ color: 'var(--color-on-surface)' }}
-      >
-        {project.title}
+      <h3 className="font-display mb-3 text-xl font-bold">
+        <Link
+          href={`/${lang}/projects/${project.id}`}
+          className="transition-colors duration-200 hover:opacity-80"
+          style={{ color: 'var(--color-on-surface)' }}
+        >
+          {project.title}
+        </Link>
       </h3>
 
       {/* Description */}
@@ -106,6 +116,7 @@ export function ProjectCard({ project, lang, dict }: ProjectCardProps) {
             {dict.viewLive} ↗
           </a>
         )}
+      </div>
       </div>
     </motion.article>
   )

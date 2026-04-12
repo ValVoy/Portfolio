@@ -46,4 +46,12 @@ export const en: Dictionary = {
     subtitle: 'Have a project or an opportunity? I am available.',
     cta: 'Send me an email',
   },
+  project: {
+    back: '← Back to projects',
+    roleLabel: 'Role',
+    typeLabel: 'Type',
+    yearLabel: 'Year',
+    openRepo: 'Source code',
+    openLive: 'Live demo',
+  },
 }

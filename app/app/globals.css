@@ -2,7 +2,10 @@
 
 /* ─── Design System — "The Kinetic Luminescence" ─────────────────────────── */
 
-@theme inline {
+/* IMPORTANT : @theme sans "inline" — génère des var() dans les utilities,
+   ce qui permet d'overrider les tokens via [data-theme] en CSS.
+   Avec @theme inline, les valeurs seraient hardcodées → theming cassé. */
+@theme {
   /* Fonts */
   --font-display: var(--font-space-grotesk);
   --font-body: var(--font-inter);
@@ -46,10 +49,19 @@
   --color-on-error: #690005;
 }
 
+/* Variables dédiées (non exposées en utility Tailwind) */
+:root {
+  --color-nav-bg: var(--color-surface-container);
+  /* Glow ambiant des sections : bleu en dark, ocre chaud en light */
+  --color-glow-ambient: var(--color-primary);
+}
+
 /* ─── Base ────────────────────────────────────────────────────────────────── */
 
-html {
-  scroll-behavior: smooth;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -60,4 +72,82 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-space-grotesk), system-ui, sans-serif;
+}
+
+/* ─── Light mode — "The Architectural Archivist" ─────────────────────────── */
+
+/* html[data-theme="light"] — spécificité 0,1,1 > :root 0,1,0 → override garanti */
+html[data-theme="light"] {
+  /* Page background : crème chaud */
+  --color-surface:                   #f5f1eb;
+  --color-surface-dim:               #e8e3db;
+  --color-surface-bright:            #fcf9f4;
+  /* Cards : blanc pur sur crème = contraste fort, comme du papier sur bureau */
+  --color-surface-container-lowest:  #ffffff;
+  --color-surface-container-low:     #f9f6f1;
+  --color-surface-container:         #ffffff;
+  --color-surface-container-high:    #ede9e2;
+  --color-surface-container-highest: #e5e1d8;
+  --color-surface-variant:           #dedad2;
+
+  --color-primary:           #1a4fd7;
+  --color-primary-dim:       #3e6af1;
+  --color-primary-container: #dce3ff;
+  --color-primary-fixed-dim: #3e6af1;
+  --color-on-primary:        #ffffff;
+
+  --color-secondary:           #4d5c93;
+  --color-secondary-container: #dce3ff;
+  --color-on-secondary:        #ffffff;
+
+  --color-tertiary: #9a4100;
+
+  --color-on-surface:         #1c1c19;
+  --color-on-surface-variant: #434654;
+
+  --color-outline:         #6e6f7d;
+  /* Beige chaud plutôt que bleu-gris froid */
+  --color-outline-variant: #d0c9bc;
+
+  --color-error:    #ba1a1a;
+  --color-on-error: #ffffff;
+
+  /* Navbar : crème intermédiaire (ni blanc pur, ni crème page) */
+  --color-nav-bg: var(--color-surface-container-low);
+  /* Glow ambiant : ocre brûlé sur fond crème = halo chaud façon Architectural Archivist */
+  --color-glow-ambient: var(--color-tertiary);
+}
+
+/* ─── Focus visible ───────────────────────────────────────────────────────── */
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ─── Skip navigation ─────────────────────────────────────────────────────── */
+
+.skip-link {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-120%);
+  z-index: 9999;
+  padding: 0.625rem 1.25rem;
+  background: var(--color-surface-container);
+  color: var(--color-primary);
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0 0 0.75rem 0.75rem;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
+  border-top: none;
+}
+
+.skip-link:focus-visible {
+  transform: translateX(-50%) translateY(0);
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }

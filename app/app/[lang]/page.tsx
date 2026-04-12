@@ -37,7 +37,7 @@ export default async function Home({ params }: PageProps<'/[lang]'>) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <main>
+      <main id="main-content">
         <Hero lang={lang} hero={dict.hero} />
         <Projects projects={featuredProjects} lang={lang} dict={dict.projects} />
         <About profile={profile} skills={skills} lang={lang} dict={dict.about} />

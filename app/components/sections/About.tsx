@@ -17,13 +17,13 @@ const categoryKeys = ['language', 'framework', 'tool'] as const
 export function About({ profile, skills, lang, dict }: AboutProps) {
   return (
     <section id="about" className="relative w-full py-[160px]">
-      {/* Ambient glow — full viewport width */}
+      {/* Ambient glow — ellipse réduite pour ne pas déborder sur les sections adjacentes */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 60% 50% at 15% 60%, color-mix(in srgb, var(--color-primary) 4%, transparent), transparent)',
+            'radial-gradient(ellipse 40% 35% at 15% 55%, color-mix(in srgb, var(--color-glow-ambient) 8%, transparent), transparent)',
         }}
       />
 
