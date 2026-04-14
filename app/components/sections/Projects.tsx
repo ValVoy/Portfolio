@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, type Variants } from 'framer-motion'
 import { ProjectCard } from './ProjectCard'
 import type { Project } from '@/data/types'
 import type { Dictionary } from '@/data/i18n/fr'
@@ -11,12 +11,12 @@ interface ProjectsProps {
   dict: Dictionary['projects']
 }
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.2 } },
 }
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 48, scale: 0.94 },
   visible: {
     opacity: 1,

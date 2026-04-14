@@ -58,6 +58,6 @@ export const fr = {
       lead: 'Lead',
     },
   },
-} as const
+}
 
 export type Dictionary = typeof fr
