@@ -28,3 +28,6 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+
+# Screenshots & captures (données potentiellement sensibles)
+docs/screen/
