@@ -1,6 +1,7 @@
 'use client'
 
 import { createContext, useContext, useState, useEffect, useLayoutEffect, useCallback, type ReactNode } from 'react'
+import { THEME_SWITCH_MS, THEME_DURATION_MS } from '@/lib/theme-constants'
 
 export type Theme = 'dark' | 'light'
 export type TransitionDirection = 'to-light' | 'to-dark'
@@ -47,16 +48,16 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     setDirection(dir)
     setIsAnimating(true)
 
-    // Bascule le thème au point médian de l'animation
+    // Bascule le thème au point médian de l'animation (~44% de la durée totale)
     setTimeout(() => {
       setTheme(next)
       document.documentElement.setAttribute('data-theme', next)
       localStorage.setItem('theme', next)
-    }, 700)
+    }, THEME_SWITCH_MS)
 
     setTimeout(() => {
       setIsAnimating(false)
-    }, 1500)
+    }, THEME_DURATION_MS)
   }, [theme, isAnimating])
 
   return (

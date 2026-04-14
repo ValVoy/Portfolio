@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Space_Grotesk, Inter } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import { getDictionary } from '@/data/i18n'
+import { siteUrl } from '@/lib/config'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { ThemeProvider } from '@/components/ui/ThemeProvider'
@@ -53,7 +54,7 @@ export async function generateMetadata({
       template: `%s | Valentin Chéron`,
     },
     description,
-    metadataBase: new URL('https://portfolio.vercel.app'),
+    metadataBase: new URL(siteUrl),
     alternates: {
       canonical: `/${lang}`,
       languages: {
@@ -65,7 +66,7 @@ export async function generateMetadata({
       type: 'website',
       locale: isFr ? 'fr_FR' : 'en_US',
       alternateLocale: isFr ? 'en_US' : 'fr_FR',
-      url: `https://portfolio.vercel.app/${lang}`,
+      url: `${siteUrl}/${lang}`,
       siteName: 'Valentin Chéron',
       title,
       description,
@@ -96,6 +97,7 @@ export default async function LocaleLayout({
     <html
       lang={lang}
       data-theme="dark"
+      data-scroll-behavior="smooth"
       className={`${spaceGrotesk.variable} ${inter.variable} h-full antialiased`}
       suppressHydrationWarning
     >

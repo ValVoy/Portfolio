@@ -51,6 +51,12 @@ export const fr = {
     yearLabel: 'Année',
     openRepo: 'Code source',
     openLive: 'Voir la démo',
+    roles: {
+      fullstack: 'Fullstack',
+      frontend: 'Frontend',
+      backend: 'Backend',
+      lead: 'Lead',
+    },
   },
 } as const
 

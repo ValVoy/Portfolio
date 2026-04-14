@@ -35,3 +35,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **i18n:** Centralized all UI strings in `data/i18n/` (Header/Footer no longer use hardcoded translations).
 - **Dev Experience:** Fixed HMR/Hot Reload on Windows by enabling Webpack polling.
 - **UI:** Extended `Button` component to support both `button` and `anchor` elements with strict typing.
+
+## [0.3.0] - 2026-04-12
+
+### Added
+- **Phase 5:** Full Dark/Light mode support with "Architectural Archivist" light palette.
+- **Phase 5:** Implemented high-performance theme transition using RAF (Request Animation Frame) for 60fps color interpolation.
+- **Phase 5:** Added "Celestial Glow" animation (sun/moon trajectory) during theme switching.
+- **Phase 6:** Dynamic Project Detail pages (`/projects/[id]`) with specific metadata and layouts.
+- **Phase 6:** Created `ProjectImage` component with automatic placeholders and optimized `next/image` integration.
+- **Phase 6:** Context-aware language switcher (preserves current route when switching between FR/EN).
+- **Phase 7:** Completed English translations for all data and UI components.
+- **Accessibility:** Added Skip Navigation links, global focus-visible states, and improved ARIA attributes.
+- **Security:** Hardened Security Headers (CSP-ready, X-Frame-Options, etc.) in `next.config.ts`.
+- **SEO:** Dynamic metadata, JSON-LD structured data, and enhanced Sitemap for project pages.
+
+### Changed
+- Refactored Tailwind v4 `@theme` configuration to fix dynamic theming (removed `inline` keyword).
+- Optimized section glows to avoid hard edges without using `overflow-hidden`.
+- Improved Navbar styling in light mode for better contrast.

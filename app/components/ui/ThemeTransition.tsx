@@ -3,8 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTheme } from './ThemeProvider'
-
-const DURATION = 1.6 // secondes
+import { THEME_DURATION_S as DURATION, THEME_DURATION_MS } from '@/lib/theme-constants'
 
 // Palettes de ciel pour l'animation du fond page
 const SKY_TO_LIGHT = [
@@ -124,7 +123,7 @@ export function ThemeTransition() {
   useEffect(() => {
     if (!isAnimating) return
 
-    const durationMs = DURATION * 1000
+    const durationMs = THEME_DURATION_MS
 
     function tick(timestamp: number) {
       if (startRef.current === null) startRef.current = timestamp

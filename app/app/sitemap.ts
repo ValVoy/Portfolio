@@ -1,7 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { projects } from '@/data/projects'
-
-const baseUrl = 'https://portfolio.vercel.app'
+import { siteUrl as baseUrl } from '@/lib/config'
 const locales = ['fr', 'en'] as const
 
 export default function sitemap(): MetadataRoute.Sitemap {

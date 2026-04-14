@@ -53,5 +53,11 @@ export const en: Dictionary = {
     yearLabel: 'Year',
     openRepo: 'Source code',
     openLive: 'Live demo',
+    roles: {
+      fullstack: 'Fullstack',
+      frontend: 'Frontend',
+      backend: 'Backend',
+      lead: 'Lead',
+    },
   },
 }

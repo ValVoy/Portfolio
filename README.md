@@ -17,11 +17,19 @@ Un portfolio haute performance, vitrine technique d'excellence, construit avec u
 
 ---
 
-## 🇺🇸 Project Overview
+## ðŸ‡ºðŸ‡¸ Project Overview
 A high-performance portfolio and technical showcase of excellence, built with a monorepo architecture and AI-driven governance (Claude & Gemini). This project embodies the **Kinetic Luminescence** concept, blending technical sophistication with visual fluidity.
 
+### Key Features
+- **Thematic Transitions:** High-performance Dark/Light mode with celestial animations (60fps color interpolation).
+- **Architecture:** Next.js 16 App Router with dynamic localized routes and strict TypeScript.
+- **Dynamic Projects:** Dedicated project pages with optimized images and specific metadata.
+- **Bilingual:** Full i18n support (FR/EN) with context-aware language switching.
+- **Performance:** Optimized for Core Web Vitals (Lighthouse target 95+).
+
 ### Key Objectives
-- **Performance:** Lighthouse Score ≥ 95 across all metrics.
+- **Performance:** Lighthouse Score â‰¥ 95 across all metrics.
+
 - **Accessibility:** RGAA/WCAG compliance by design.
 - **Security:** Security header hardening and systematic dependency auditing.
 - **Bilingualism:** Full user experience in both French and English.

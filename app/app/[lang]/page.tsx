@@ -8,8 +8,7 @@ import { featuredProjects } from '@/data/projects'
 import { skills } from '@/data/skills'
 import { profile } from '@/data/profile'
 import { t } from '@/lib/i18n'
-
-const baseUrl = 'https://portfolio.vercel.app'
+import { siteUrl } from '@/lib/config'
 
 export default async function Home({ params }: PageProps<'/[lang]'>) {
   const { lang } = await params
@@ -22,7 +21,7 @@ export default async function Home({ params }: PageProps<'/[lang]'>) {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: profile.name,
-    url: `${baseUrl}/${lang}`,
+    url: `${siteUrl}/${lang}`,
     jobTitle: t(profile.title, lang),
     description: t(profile.bio, lang),
     sameAs: [

@@ -6,16 +6,8 @@ import { projects } from '@/data/projects'
 import { Chip } from '@/components/ui/Chip'
 import { ProjectImage } from '@/components/ui/ProjectImage'
 import { t } from '@/lib/i18n'
-import type { ProjectRole, ProjectStatus } from '@/data/types'
-
-const roleLabel: Record<ProjectRole, string> = {
-  fullstack: 'Fullstack',
-  frontend: 'Frontend',
-  backend: 'Backend',
-  lead: 'Lead',
-}
-
-const baseUrl = 'https://portfolio.vercel.app'
+import { siteUrl as baseUrl } from '@/lib/config'
+import type { ProjectStatus } from '@/data/types'
 
 export async function generateStaticParams() {
   const locales = ['fr', 'en'] as const
@@ -145,7 +137,7 @@ export default async function ProjectPage({
               className="font-medium"
               style={{ color: 'var(--color-primary)' }}
             >
-              {roleLabel[project.role]}
+              {d.roles[project.role]}
             </span>
           </p>
         </div>
