@@ -14,7 +14,6 @@ export const projects: Project[] = [
     role: 'frontend',
     status: 'in_progress',
     repoUrl: 'https://github.com/DevRedious/kois-story',
-    liveUrl: 'https://lnvi1e1noiilgzfjsnwe7luj.137.74.112.197.sslip.io/',
     teamProject: true,
     featured: true,
     year: 2026,

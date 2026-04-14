@@ -11,3 +11,4 @@
 10-04-2026 | 17:54 | Phase 5 (partielle) — SEO (metadata, og:image, JSON-LD, sitemap, robots) + nav mobile hamburger | [3dce910]
 10-04-2026 | 18:17 | Fix audit Gemini #06 — async params dans opengraph-image.tsx | [b395a33]
 12-04-2026 | 23:15 | Phase 5-6-7 — dark/light mode (animation coucher/levé de soleil, palette Architectural Archivist), pages détail projet, composant ProjectImage avec placeholder, switcher de langue context-aware, traductions EN complètes | [55a03b6]
+14-04-2026 | 16:36 | Fix audit Gemini #07+08 — centralisation siteUrl (lib/config.ts + NEXT_PUBLIC_SITE_URL), CSP dans next.config.ts, roleLabel extrait dans les dictionnaires i18n, constante THEME_DURATION centralisée (lib/theme-constants.ts), fix data-scroll-behavior | [0b5b24f]
