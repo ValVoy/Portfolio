@@ -2,7 +2,7 @@ import type { Dictionary } from './fr'
 
 export const en: Dictionary = {
   home: {
-    tagline: 'Portfolio — under construction',
+    tagline: 'Portfolio, work in progress',
   },
   now: {
     title: 'Right now',
@@ -45,7 +45,7 @@ export const en: Dictionary = {
     title: 'About',
     subtitle: 'My background & skills',
     formation: 'Education',
-    formationDetail: 'The Hacking Project — Fullstack web developer',
+    formationDetail: 'The Hacking Project, fullstack web developer',
     location: 'Location',
     skills: {
       language: 'Languages',

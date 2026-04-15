@@ -5,8 +5,8 @@ export const projects: Project[] = [
     id: 'kois-story',
     title: "Koï's Story",
     description: {
-      fr: "Vitrine digitale pour un élevage de carpes koï — catalogue filtrable, fiche produit, commande via WhatsApp et back-office admin.",
-      en: "Digital showcase for a koi carp farm — filterable catalogue, product page, WhatsApp ordering and admin back-office.",
+      fr: "Vitrine digitale pour un élevage de carpes koï : catalogue filtrable, fiche produit, commande via WhatsApp et back-office admin.",
+      en: "Digital showcase for a koi carp farm: filterable catalogue, product page, WhatsApp ordering and admin back-office.",
     },
     longDescription: {
       fr: "Projet de fin de formation The Hacking Project. Plateforme de présentation et de prise de commande pour un élevage de carpes koï. Les visiteurs peuvent parcourir le catalogue, filtrer par variété, taille ou prix, et contacter le vendeur directement via WhatsApp en un clic. Comprend un back-office complet pour la gestion des koïs et des messages.",
@@ -25,8 +25,8 @@ export const projects: Project[] = [
     id: 'eventbrite-v2',
     title: 'EventBrite-like',
     description: {
-      fr: "Clone fonctionnel d'Eventbrite — création et gestion d'événements, inscription, tableau de bord.",
-      en: "Functional Eventbrite clone — event creation and management, registration, dashboard.",
+      fr: "Clone fonctionnel d'Eventbrite : création et gestion d'événements, inscription, tableau de bord.",
+      en: "Functional Eventbrite clone: event creation and management, registration, dashboard.",
     },
     longDescription: {
       fr: "Projet réalisé durant la formation THP. Application web complète permettant de créer, gérer et s'inscrire à des événements. Les organisateurs disposent d'un tableau de bord pour suivre les inscriptions. Les participants peuvent parcourir les événements disponibles et s'y inscrire en quelques clics. Développement MVC complet avec Ruby on Rails.",
@@ -50,8 +50,8 @@ export const projects: Project[] = [
     id: 'atomic-design',
     title: 'Atomic Design',
     description: {
-      fr: "Bibliothèque de composants UI en HTML/CSS — atoms, molécules et organismes inspirés d'Eventbrite.",
-      en: "HTML/CSS UI component library — atoms, molecules and organisms inspired by Eventbrite.",
+      fr: "Bibliothèque de composants UI en HTML/CSS : atoms, molécules et organismes inspirés d'Eventbrite.",
+      en: "HTML/CSS UI component library: atoms, molecules and organisms inspired by Eventbrite.",
     },
     longDescription: {
       fr: "Projet de design system réalisé durant la formation THP. Application de la méthodologie Atomic Design pour construire une bibliothèque de composants cohérente : boutons, formulaires, cartes, navigation, bannières, pricing. Chaque composant est documenté et réutilisable, avec un hub de présentation des éléments.",
@@ -78,8 +78,8 @@ export const projects: Project[] = [
     id: 'rpg-ruby',
     title: 'The Hacking RPG',
     description: {
-      fr: "Jeu de rôle en ligne de commande — création de personnage, combat au tour par tour, en Ruby pur.",
-      en: "Command-line RPG — character creation, turn-based combat, pure Ruby.",
+      fr: "Jeu de rôle en ligne de commande : création de personnage, combat au tour par tour, en Ruby pur.",
+      en: "Command-line RPG: character creation, turn-based combat, pure Ruby.",
     },
     longDescription: {
       fr: "Projet réalisé durant la formation THP. Jeu de rôle entièrement en terminal : le joueur crée son héros en distribuant des points de statistiques (Force, Dextérité, Constitution, Chance, Intelligence), puis s'engage dans des combats au tour par tour contre un adversaire. Logique de combat, gestion des points de vie et fin de partie en Ruby orienté objet.",
@@ -104,8 +104,8 @@ export const projects: Project[] = [
     id: 'freedoc',
     title: 'FreeDoc',
     description: {
-      fr: "Application Ruby de gestion de documents — premier projet full-stack avec modèles, vues et persistance.",
-      en: "Ruby document management app — first full-stack project with models, views and data persistence.",
+      fr: "Application Ruby de gestion de documents : premier projet full-stack avec modèles, vues et persistance.",
+      en: "Ruby document management app: first full-stack project with models, views and data persistence.",
     },
     longDescription: {
       fr: "Projet full-stack réalisé durant la formation THP. Application de gestion de documents permettant la création, consultation et organisation de fichiers. Premier projet structuré avec séparation des responsabilités (modèles, vues, logique métier) et persistance des données. Schéma de base de données conçu autour de médecins, patients, spécialités et rendez-vous.",
@@ -124,8 +124,8 @@ export const projects: Project[] = [
     id: 'chatbot-openai',
     title: 'Chatbot OpenAI',
     description: {
-      fr: "Chatbot en Ruby intégrant l'API OpenAI — entrée utilisateur en ligne de commande, réponses générées par GPT.",
-      en: "Ruby chatbot integrating the OpenAI API — command-line user input, GPT-generated responses.",
+      fr: "Chatbot en Ruby intégrant l'API OpenAI : entrée utilisateur en ligne de commande, réponses générées par GPT.",
+      en: "Ruby chatbot integrating the OpenAI API: command-line user input, GPT-generated responses.",
     },
     longDescription: {
       fr: "Projet réalisé durant la formation THP. Intégration de l'API OpenAI dans un script Ruby permettant de dialoguer avec un modèle GPT directement depuis le terminal. Gestion de la clé API, formatage des prompts et affichage des réponses.",

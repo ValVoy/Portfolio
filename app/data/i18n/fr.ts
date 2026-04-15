@@ -1,6 +1,6 @@
 export const fr = {
   home: {
-    tagline: 'Portfolio — en construction',
+    tagline: 'Portfolio en construction',
   },
   now: {
     title: 'En ce moment',
@@ -43,7 +43,7 @@ export const fr = {
     title: 'À propos',
     subtitle: 'Mon parcours & mes compétences',
     formation: 'Formation',
-    formationDetail: 'The Hacking Project — Développeur web fullstack',
+    formationDetail: 'The Hacking Project, développeur web fullstack',
     location: 'Localisation',
     skills: {
       language: 'Langages',
