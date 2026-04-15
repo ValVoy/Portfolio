@@ -55,6 +55,11 @@ export default async function ProjectPage({
   const d = dict.project
   const dp = dict.projects
 
+  const realProjects = projects.filter((p) => !p.placeholder)
+  const currentIndex = realProjects.findIndex((p) => p.id === id)
+  const prevProject = currentIndex > 0 ? realProjects[currentIndex - 1] : null
+  const nextProject = currentIndex < realProjects.length - 1 ? realProjects[currentIndex + 1] : null
+
   const statusLabel: Record<ProjectStatus, string> = {
     in_progress: dp.statusInProgress,
     completed: dp.statusCompleted,
@@ -149,7 +154,7 @@ export default async function ProjectPage({
       </div>
 
       {/* ── Content ──────────────────────────────────────────────── */}
-      <section className="w-full pb-[160px]">
+      <section className="w-full pb-24">
         <div className="mx-auto grid w-full max-w-4xl grid-cols-1 gap-16 px-6 lg:grid-cols-[1fr_280px]">
 
           {/* Main — long description */}
@@ -246,6 +251,62 @@ export default async function ProjectPage({
           </aside>
         </div>
       </section>
+      {/* ── Navigation entre projets ─────────────────────────────── */}
+      {(prevProject || nextProject) && (
+        <nav
+          aria-label={lang === 'fr' ? 'Navigation entre projets' : 'Project navigation'}
+          className="w-full pb-[160px]"
+          style={{ borderTop: '1px solid color-mix(in srgb, var(--color-outline) 20%, transparent)' }}
+        >
+          <div className="mx-auto grid w-full max-w-4xl grid-cols-2 px-6 pt-10">
+            {/* Précédent */}
+            <div>
+              {prevProject && (
+                <Link
+                  href={`/${lang}/projects/${prevProject.id}`}
+                  className="group inline-flex flex-col gap-2 transition-opacity hover:opacity-70"
+                >
+                  <span
+                    className="font-body text-xs uppercase tracking-[0.1em]"
+                    style={{ color: 'var(--color-on-surface-variant)' }}
+                  >
+                    ← {d.prevProject}
+                  </span>
+                  <span
+                    className="font-display text-lg font-semibold leading-tight transition-colors"
+                    style={{ color: 'var(--color-on-surface)' }}
+                  >
+                    {prevProject.title}
+                  </span>
+                </Link>
+              )}
+            </div>
+
+            {/* Suivant */}
+            <div className="flex justify-end text-right">
+              {nextProject && (
+                <Link
+                  href={`/${lang}/projects/${nextProject.id}`}
+                  className="group inline-flex flex-col gap-2 transition-opacity hover:opacity-70"
+                >
+                  <span
+                    className="font-body text-xs uppercase tracking-[0.1em]"
+                    style={{ color: 'var(--color-on-surface-variant)' }}
+                  >
+                    {d.nextProject} →
+                  </span>
+                  <span
+                    className="font-display text-lg font-semibold leading-tight transition-colors"
+                    style={{ color: 'var(--color-on-surface)' }}
+                  >
+                    {nextProject.title}
+                  </span>
+                </Link>
+              )}
+            </div>
+          </div>
+        </nav>
+      )}
     </main>
   )
 }

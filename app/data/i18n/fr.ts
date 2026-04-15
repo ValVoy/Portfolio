@@ -63,6 +63,8 @@ export const fr = {
     yearLabel: 'Année',
     openRepo: 'Code source',
     openLive: 'Voir la démo',
+    prevProject: 'Projet précédent',
+    nextProject: 'Projet suivant',
     roles: {
       fullstack: 'Fullstack',
       frontend: 'Frontend',
