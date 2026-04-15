@@ -26,6 +26,9 @@ export const fr = {
     solo: 'Solo',
     viewCode: 'Code source',
     viewLive: 'Voir la démo',
+    prevPage: 'Page précédente',
+    nextPage: 'Page suivante',
+    comingSoon: 'À venir',
   },
   about: {
     title: 'À propos',

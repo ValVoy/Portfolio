@@ -4,7 +4,7 @@ import { Hero } from '@/components/sections/Hero'
 import { Projects } from '@/components/sections/Projects'
 import { About } from '@/components/sections/About'
 import { Contact } from '@/components/sections/Contact'
-import { featuredProjects } from '@/data/projects'
+import { projects } from '@/data/projects'
 import { skills } from '@/data/skills'
 import { profile } from '@/data/profile'
 import { t } from '@/lib/i18n'
@@ -38,7 +38,7 @@ export default async function Home({ params }: PageProps<'/[lang]'>) {
       />
       <main id="main-content">
         <Hero lang={lang} hero={dict.hero} />
-        <Projects projects={featuredProjects} lang={lang} dict={dict.projects} />
+        <Projects projects={projects} lang={lang} dict={dict.projects} />
         <About profile={profile} skills={skills} lang={lang} dict={dict.about} />
         <Contact social={profile.social} dict={dict.contact} />
       </main>

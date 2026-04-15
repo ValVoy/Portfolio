@@ -12,12 +12,14 @@ export interface Project {
   stack: string[]
   role: ProjectRole
   status: ProjectStatus
-  repoUrl: string
+  repoUrl?: string
   liveUrl?: string
   /** Chemin relatif depuis /public, ex: "/projects/kois-story.webp" */
   image?: string
   teamProject: boolean
   featured: boolean
+  /** Slot réservé — contenu à remplir plus tard */
+  placeholder?: boolean
   year: number
 }
 

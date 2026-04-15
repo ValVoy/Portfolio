@@ -15,6 +15,74 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, lang, dict }: ProjectCardProps) {
+  if (project.placeholder) {
+    return (
+      <motion.div
+        className="flex h-full flex-col overflow-hidden"
+        animate={{ opacity: [0.55, 0.75, 0.55] }}
+        transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+        style={{
+          backgroundColor: 'var(--color-surface-container)',
+          borderRadius: '1.5rem',
+          boxShadow: '0 4px 32px color-mix(in srgb, var(--color-primary) 4%, transparent)',
+        }}
+      >
+        {/* Zone image — grille de points + badge */}
+        <div
+          className="relative flex-shrink-0 overflow-hidden"
+          style={{
+            height: '160px',
+            background: 'linear-gradient(135deg, var(--color-surface-container-high) 0%, var(--color-surface-container-low) 100%)',
+            backgroundImage: `
+              linear-gradient(135deg, var(--color-surface-container-high) 0%, var(--color-surface-container-low) 100%),
+              radial-gradient(circle, color-mix(in srgb, var(--color-primary) 18%, transparent) 1px, transparent 1px)
+            `,
+            backgroundSize: '100% 100%, 24px 24px',
+          }}
+        >
+          <span
+            className="absolute right-4 top-4 font-body text-xs uppercase tracking-[0.1em] px-2 py-1 rounded-full"
+            style={{
+              backgroundColor: 'color-mix(in srgb, var(--color-primary) 12%, transparent)',
+              color: 'var(--color-primary)',
+            }}
+          >
+            {dict.comingSoon}
+          </span>
+        </div>
+
+        {/* Contenu squelette */}
+        <div className="flex flex-1 flex-col p-8">
+          {/* Status + année */}
+          <div className="mb-4 flex items-center justify-between">
+            <div className="h-3 w-24 rounded-full" style={{ backgroundColor: 'var(--color-surface-container-high)' }} />
+            <div className="h-3 w-8 rounded-full" style={{ backgroundColor: 'var(--color-surface-container-high)' }} />
+          </div>
+
+          {/* Titre */}
+          <div className="mb-3 h-6 w-40 rounded-lg" style={{ backgroundColor: 'var(--color-surface-container-high)' }} />
+
+          {/* Description */}
+          <div className="mb-6 flex flex-1 flex-col gap-2.5">
+            <div className="h-3 w-full rounded-full" style={{ backgroundColor: 'var(--color-surface-container-high)' }} />
+            <div className="h-3 w-4/5 rounded-full" style={{ backgroundColor: 'var(--color-surface-container-high)' }} />
+            <div className="h-3 w-3/5 rounded-full" style={{ backgroundColor: 'var(--color-surface-container-high)' }} />
+          </div>
+
+          {/* Chips */}
+          <div className="mb-6 flex gap-2">
+            <div className="h-6 w-16 rounded-full" style={{ backgroundColor: 'var(--color-surface-container-high)' }} />
+            <div className="h-6 w-20 rounded-full" style={{ backgroundColor: 'var(--color-surface-container-high)' }} />
+            <div className="h-6 w-14 rounded-full" style={{ backgroundColor: 'var(--color-surface-container-high)' }} />
+          </div>
+
+          {/* Lien fantôme */}
+          <div className="h-4 w-28 rounded-full" style={{ backgroundColor: 'var(--color-surface-container-high)' }} />
+        </div>
+      </motion.div>
+    )
+  }
+
   return (
     <motion.article
       whileHover={{ y: -6 }}
@@ -94,16 +162,18 @@ export function ProjectCard({ project, lang, dict }: ProjectCardProps) {
 
       {/* Links */}
       <div className="flex items-center gap-5">
-        <a
-          href={project.repoUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-body text-sm font-medium transition-opacity hover:opacity-70"
-          style={{ color: 'var(--color-primary-fixed-dim)' }}
-          aria-label={`${dict.viewCode} — ${project.title}`}
-        >
-          {dict.viewCode} →
-        </a>
+        {project.repoUrl && (
+          <a
+            href={project.repoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-body text-sm font-medium transition-opacity hover:opacity-70"
+            style={{ color: 'var(--color-primary-fixed-dim)' }}
+            aria-label={`${dict.viewCode} — ${project.title}`}
+          >
+            {dict.viewCode} →
+          </a>
+        )}
         {project.liveUrl && (
           <a
             href={project.liveUrl}

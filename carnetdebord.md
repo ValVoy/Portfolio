@@ -16,3 +16,4 @@
 14-04-2026 | 17:42 | Fix redirection i18n en production — proxy.ts renommé middleware.ts, fonction proxy → middleware (Next.js ignorait le fichier mal nommé) | [9f54dd7]
 14-04-2026 | 21:13 | Fix conflit middleware.ts / proxy.ts — Next.js 16 utilise proxy.ts, suppression du middleware.ts créé par erreur | [c6d91a6]
 14-04-2026 | 22:38 | Phase 8 terminée — valentincheron.vercel.app en ligne, sitemap/robots valides, navigation FR/EN, dark/light mode, pages projet : tout fonctionnel | [42f08d3]
+15-04-2026 | 11:27 | Suppression light mode (identité visuelle unique dark), package.json 1.0.0, governance/ retiré du repo (.gitignore + git rm --cached) | [0fdff1a]

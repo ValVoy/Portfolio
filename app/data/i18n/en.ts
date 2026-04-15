@@ -28,6 +28,9 @@ export const en: Dictionary = {
     solo: 'Solo',
     viewCode: 'Source code',
     viewLive: 'Live demo',
+    prevPage: 'Previous page',
+    nextPage: 'Next page',
+    comingSoon: 'Coming soon',
   },
   about: {
     title: 'About',

@@ -163,16 +163,18 @@ export default async function ProjectPage({
 
             {/* Links */}
             <div className="mt-10 flex flex-wrap gap-6">
-              <a
-                href={project.repoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-body text-sm font-medium transition-opacity hover:opacity-70"
-                style={{ color: 'var(--color-primary-fixed-dim)' }}
-                aria-label={`${d.openRepo} — ${project.title}`}
-              >
-                {d.openRepo} →
-              </a>
+              {project.repoUrl && (
+                <a
+                  href={project.repoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-body text-sm font-medium transition-opacity hover:opacity-70"
+                  style={{ color: 'var(--color-primary-fixed-dim)' }}
+                  aria-label={`${d.openRepo} — ${project.title}`}
+                >
+                  {d.openRepo} →
+                </a>
+              )}
               {project.liveUrl && (
                 <a
                   href={project.liveUrl}
