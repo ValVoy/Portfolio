@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useCallback } from 'react'
 import { motion, AnimatePresence, type Variants } from 'framer-motion'
 import { ProjectCard } from './ProjectCard'
 import type { Project } from '@/data/types'
@@ -14,7 +14,6 @@ interface ProjectsProps {
   dict: Dictionary['projects']
 }
 
-// Slide directionnel : entre/sort depuis la droite ou la gauche selon la direction
 const slideVariants: Variants = {
   enter: (direction: number) => ({
     x: direction > 0 ? 72 : -72,
@@ -38,7 +37,6 @@ const slideVariants: Variants = {
   }),
 }
 
-// Stagger des cards à l'intérieur de chaque groupe
 const cardVariants: Variants = {
   hidden: { opacity: 0, y: 28 },
   visible: (i: number) => ({
@@ -73,6 +71,7 @@ function ChevronRight() {
 }
 
 export function Projects({ projects, lang, dict }: ProjectsProps) {
+  // ── Desktop ────────────────────────────────────────────────────────────────
   const [page, setPage] = useState(0)
   const [direction, setDirection] = useState(1)
   const totalPages = Math.ceil(projects.length / PAGE_SIZE)
@@ -82,6 +81,27 @@ export function Projects({ projects, lang, dict }: ProjectsProps) {
     if (newPage === page) return
     setDirection(newPage > page ? 1 : -1)
     setPage(newPage)
+  }
+
+  // ── Mobile / tablette ──────────────────────────────────────────────────────
+  const [mobileIndex, setMobileIndex] = useState(0)
+  const scrollRef = useRef<HTMLDivElement>(null)
+
+  const handleScroll = useCallback(() => {
+    const el = scrollRef.current
+    if (!el) return
+    // Largeur d'une card = largeur totale scrollable / nombre de projets
+    const cardWidth = el.scrollWidth / projects.length
+    const index = Math.round(el.scrollLeft / cardWidth)
+    setMobileIndex(Math.min(Math.max(index, 0), projects.length - 1))
+  }, [projects.length])
+
+  const scrollToIndex = (i: number) => {
+    const el = scrollRef.current
+    if (!el) return
+    const cardWidth = el.scrollWidth / projects.length
+    el.scrollTo({ left: i * cardWidth, behavior: 'smooth' })
+    setMobileIndex(i)
   }
 
   return (
@@ -110,92 +130,139 @@ export function Projects({ projects, lang, dict }: ProjectsProps) {
           </p>
         </motion.div>
 
-        {/* Slider */}
-        <div className="relative">
-          <AnimatePresence custom={direction} mode="popLayout">
-            <motion.div
-              key={page}
-              custom={direction}
-              variants={slideVariants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 lg:grid-cols-3"
+        {/* ── Mobile / tablette (< lg) ───────────────────────────────────── */}
+        <div className="lg:hidden">
+          <div className="relative">
+            {/* Gradient droit — indique qu'il y a plus de contenu */}
+            <div
+              className="pointer-events-none absolute right-0 top-0 z-10 h-full w-16"
+              style={{
+                background: 'linear-gradient(to left, var(--color-surface) 0%, transparent 100%)',
+              }}
+            />
+
+            <div
+              ref={scrollRef}
+              onScroll={handleScroll}
+              className="flex gap-4 overflow-x-auto pb-2 [&::-webkit-scrollbar]:hidden"
+              style={{ scrollSnapType: 'x mandatory', scrollbarWidth: 'none' }}
             >
-              {currentProjects.map((project, i) => (
-                <motion.div
+              {projects.map((project) => (
+                <div
                   key={project.id}
-                  custom={i}
-                  variants={cardVariants}
-                  initial="hidden"
-                  animate="visible"
-                  className="flex"
+                  className="w-[75vw] flex-shrink-0 md:w-[calc(45vw)] flex"
+                  style={{ scrollSnapAlign: 'start' }}
                 >
                   <ProjectCard project={project} lang={lang} dict={dict} />
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
-          </AnimatePresence>
-        </div>
+              <div className="w-4 flex-shrink-0 md:w-8" aria-hidden="true" />
+            </div>
+          </div>
 
-        {/* Navigation */}
-        <div className="mt-12 flex items-center justify-center gap-6">
-
-          {/* Flèche gauche */}
-          <motion.button
-            onClick={() => navigate(page - 1)}
-            disabled={page === 0}
-            aria-label={dict.prevPage}
-            whileHover={page > 0 ? { scale: 1.08 } : {}}
-            whileTap={page > 0 ? { scale: 0.95 } : {}}
-            transition={{ duration: 0.15 }}
-            className="flex h-11 w-11 items-center justify-center rounded-full transition-colors duration-200 disabled:pointer-events-none disabled:opacity-30"
-            style={{
-              backgroundColor: 'var(--color-surface-container-high)',
-              color: 'var(--color-primary)',
-            }}
-          >
-            <ChevronLeft />
-          </motion.button>
-
-          {/* Dots */}
-          <div className="flex items-center gap-3" role="tablist" aria-label="Pages de projets">
-            {Array.from({ length: totalPages }).map((_, i) => (
+          {/* Dots mobile */}
+          <div className="mt-8 flex items-center justify-center gap-1.5">
+            {projects.map((_, i) => (
               <motion.button
                 key={i}
-                role="tab"
-                aria-selected={i === page}
-                aria-label={`Page ${i + 1}`}
-                onClick={() => navigate(i)}
+                aria-label={`Projet ${i + 1}`}
+                onClick={() => scrollToIndex(i)}
                 animate={{
-                  width: i === page ? 24 : 8,
-                  opacity: i === page ? 1 : 0.35,
+                  width: i === mobileIndex ? 20 : 5,
+                  opacity: i === mobileIndex ? 1 : 0.3,
                 }}
                 transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-                className="h-2 rounded-full"
+                className="h-[5px] rounded-full"
                 style={{ backgroundColor: 'var(--color-primary)' }}
               />
             ))}
           </div>
-
-          {/* Flèche droite */}
-          <motion.button
-            onClick={() => navigate(page + 1)}
-            disabled={page === totalPages - 1}
-            aria-label={dict.nextPage}
-            whileHover={page < totalPages - 1 ? { scale: 1.08 } : {}}
-            whileTap={page < totalPages - 1 ? { scale: 0.95 } : {}}
-            transition={{ duration: 0.15 }}
-            className="flex h-11 w-11 items-center justify-center rounded-full transition-colors duration-200 disabled:pointer-events-none disabled:opacity-30"
-            style={{
-              backgroundColor: 'var(--color-surface-container-high)',
-              color: 'var(--color-primary)',
-            }}
-          >
-            <ChevronRight />
-          </motion.button>
-
         </div>
+
+        {/* ── Desktop (lg+) ─────────────────────────────────────────────────── */}
+        <div className="hidden lg:block">
+          <div className="relative">
+            <AnimatePresence custom={direction} mode="popLayout">
+              <motion.div
+                key={page}
+                custom={direction}
+                variants={slideVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                className="grid grid-cols-3 items-stretch gap-6"
+              >
+                {currentProjects.map((project, i) => (
+                  <motion.div
+                    key={project.id}
+                    custom={i}
+                    variants={cardVariants}
+                    initial="hidden"
+                    animate="visible"
+                    className="flex"
+                  >
+                    <ProjectCard project={project} lang={lang} dict={dict} />
+                  </motion.div>
+                ))}
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Navigation desktop */}
+          <div className="mt-12 flex items-center justify-center gap-6">
+            <motion.button
+              onClick={() => navigate(page - 1)}
+              disabled={page === 0}
+              aria-label={dict.prevPage}
+              whileHover={page > 0 ? { scale: 1.08 } : {}}
+              whileTap={page > 0 ? { scale: 0.95 } : {}}
+              transition={{ duration: 0.15 }}
+              className="flex h-11 w-11 items-center justify-center rounded-full transition-colors duration-200 disabled:pointer-events-none disabled:opacity-30"
+              style={{
+                backgroundColor: 'var(--color-surface-container-high)',
+                color: 'var(--color-primary)',
+              }}
+            >
+              <ChevronLeft />
+            </motion.button>
+
+            <div className="flex items-center gap-3" role="tablist" aria-label="Pages de projets">
+              {Array.from({ length: totalPages }).map((_, i) => (
+                <motion.button
+                  key={i}
+                  role="tab"
+                  aria-selected={i === page}
+                  aria-label={`Page ${i + 1}`}
+                  onClick={() => navigate(i)}
+                  animate={{
+                    width: i === page ? 24 : 8,
+                    opacity: i === page ? 1 : 0.35,
+                  }}
+                  transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+                  className="h-2 rounded-full"
+                  style={{ backgroundColor: 'var(--color-primary)' }}
+                />
+              ))}
+            </div>
+
+            <motion.button
+              onClick={() => navigate(page + 1)}
+              disabled={page === totalPages - 1}
+              aria-label={dict.nextPage}
+              whileHover={page < totalPages - 1 ? { scale: 1.08 } : {}}
+              whileTap={page < totalPages - 1 ? { scale: 0.95 } : {}}
+              transition={{ duration: 0.15 }}
+              className="flex h-11 w-11 items-center justify-center rounded-full transition-colors duration-200 disabled:pointer-events-none disabled:opacity-30"
+              style={{
+                backgroundColor: 'var(--color-surface-container-high)',
+                color: 'var(--color-primary)',
+              }}
+            >
+              <ChevronRight />
+            </motion.button>
+          </div>
+        </div>
+
       </div>
     </section>
   )
