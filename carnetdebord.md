@@ -21,3 +21,4 @@
 15-04-2026 | 12:11 | Responsive mobile/tablette section projets — scroll horizontal CSS snap, peek 75vw mobile / 45vw tablette, dots synchro scroll | [18e3054]
 15-04-2026 | 16:36 | Projets réels + galerie images — EventBrite/Atomic Design/RPG Ruby/FreeDoc/Chatbot/Crazy Scrap avec images WebP Sharp, visuels code-image SVG pour projets sans screenshot, ProjectGallery lightbox, fix couverture RPG, DA feedback Hero/About, cards minHeight 600px, LCP priority | [4dcb1c6]
 15-04-2026 | 22:17 | Refonte galerie + Hero cycling text + section En ce moment — ProjectGallery ratio 16/9 swipe mobile slide directionnel, CyclingText blur fade spacer invisible, Hero titre animé prefix+suffixe cycling 2.8s, section Now carte centrée dot pulsant mini-card LifeOs items J'explore/Je lis lien Amazon bilingue | [b728c82] [a34e8f7]
+15-04-2026 | 22:22 | Transition de page fluide + nettoyage textes tirets cadratin | [b77c3d6]
