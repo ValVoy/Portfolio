@@ -26,7 +26,7 @@ export type Locale = (typeof locales)[number]
 
 export const viewport: Viewport = {
   themeColor: '#0e0e10',
-  colorScheme: 'dark only',
+  colorScheme: 'dark',
 }
 
 export async function generateStaticParams() {
