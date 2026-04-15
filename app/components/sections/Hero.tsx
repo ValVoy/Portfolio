@@ -3,6 +3,7 @@
 import { profile } from '@/data/profile'
 import { t } from '@/lib/i18n'
 import { Button } from '@/components/ui/Button'
+import { CyclingText } from '@/components/ui/CyclingText'
 import type { Dictionary } from '@/data/i18n/fr'
 
 interface HeroProps {
@@ -42,7 +43,11 @@ export function Hero({ lang, hero }: HeroProps) {
 
         {/* Title */}
         <p className="font-display mt-4 text-2xl font-medium text-on-surface-variant sm:text-3xl">
-          {t(profile.title, lang)}
+          {hero.titlePrefix}{' '}
+          <CyclingText
+            words={hero.titleSuffixes}
+            style={{ color: 'var(--color-primary)' }}
+          />
         </p>
 
         {/* Bio */}

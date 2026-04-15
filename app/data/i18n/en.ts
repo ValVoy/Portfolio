@@ -8,6 +8,8 @@ export const en: Dictionary = {
     cta: 'See my projects',
     ctaSecondary: 'Get in touch',
     availability: 'Open to new opportunities',
+    titlePrefix: 'Junior developer',
+    titleSuffixes: ['fullstack', 'Ruby on Rails', 'React · Next.js'],
   },
   nav: {
     projects: 'Projects',

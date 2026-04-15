@@ -19,3 +19,4 @@
 15-04-2026 | 11:27 | Suppression light mode (identité visuelle unique dark), package.json 1.0.0, governance/ retiré du repo (.gitignore + git rm --cached) | [0fdff1a]
 15-04-2026 | 11:46 | Slider projets 3×3 — AnimatePresence directionnel, dots animés, flèches, 5 placeholders avec shimmer et badge À venir | [c0be2e5]
 15-04-2026 | 12:11 | Responsive mobile/tablette section projets — scroll horizontal CSS snap, peek 75vw mobile / 45vw tablette, dots synchro scroll | [18e3054]
+15-04-2026 | 16:36 | Projets réels + galerie images — EventBrite/Atomic Design/RPG Ruby/FreeDoc/Chatbot/Crazy Scrap avec images WebP Sharp, visuels code-image SVG pour projets sans screenshot, ProjectGallery lightbox, fix couverture RPG, DA feedback Hero/About, cards minHeight 600px, LCP priority | [4dcb1c6]

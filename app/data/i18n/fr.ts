@@ -6,6 +6,8 @@ export const fr = {
     cta: 'Voir mes projets',
     ctaSecondary: 'Me contacter',
     availability: 'Disponible pour de nouvelles opportunités',
+    titlePrefix: 'Développeur web',
+    titleSuffixes: ['fullstack junior', 'Ruby on Rails', 'React · Next.js'],
   },
   nav: {
     projects: 'Projets',
