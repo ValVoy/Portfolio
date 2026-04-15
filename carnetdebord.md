@@ -23,3 +23,4 @@
 15-04-2026 | 22:17 | Refonte galerie + Hero cycling text + section En ce moment — ProjectGallery ratio 16/9 swipe mobile slide directionnel, CyclingText blur fade spacer invisible, Hero titre animé prefix+suffixe cycling 2.8s, section Now carte centrée dot pulsant mini-card LifeOs items J'explore/Je lis lien Amazon bilingue | [b728c82] [a34e8f7]
 15-04-2026 | 22:22 | Transition de page fluide + nettoyage textes tirets cadratin | [b77c3d6]
 15-04-2026 | 22:28 | Easter egg terminal — backtick ou bouton footer, commandes whoami/ls/cat/git log/contact, header macOS, historique ↑↓ | [bf8e6aa]
+15-04-2026 | 22:36 | Navigation entre projets — prev/next en bas de page détail, filtre placeholders, labels discrets + titre projet, traductions FR/EN | [e44d882]

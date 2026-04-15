@@ -56,6 +56,15 @@ export const fr = {
     subtitle: "Vous avez un projet ou une opportunité\u00a0? Je suis disponible.",
     cta: "M'écrire un email",
   },
+  notFound: {
+    cmd1: '$ cd',
+    error: 'bash: aucun fichier ou dossier de ce type',
+    cmd2: '$ ls ~',
+    available: 'accueil   projets   à-propos   contact',
+    suggestion: '# Peut-être cherchiez-vous',
+    home: 'Retour à l\'accueil',
+    projects: 'Voir les projets',
+  },
   project: {
     back: '← Retour aux projets',
     roleLabel: 'Rôle',

@@ -58,6 +58,15 @@ export const en: Dictionary = {
     subtitle: 'Have a project or an opportunity? I am available.',
     cta: 'Send me an email',
   },
+  notFound: {
+    cmd1: '$ cd',
+    error: 'bash: no such file or directory',
+    cmd2: '$ ls ~',
+    available: 'home   projects   about   contact',
+    suggestion: '# Maybe you were looking for',
+    home: 'Back to home',
+    projects: 'See projects',
+  },
   project: {
     back: '← Back to projects',
     roleLabel: 'Role',
