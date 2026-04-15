@@ -4,7 +4,6 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import type { Dictionary } from '@/data/i18n/fr'
 
 interface HeaderProps {
@@ -64,9 +63,6 @@ export function Header({ lang, nav }: HeaderProps) {
             >
               {nav.langSwitch}
             </Link>
-          </li>
-          <li>
-            <ThemeToggle />
           </li>
         </ul>
 
@@ -134,9 +130,6 @@ export function Header({ lang, nav }: HeaderProps) {
                 >
                   {nav.langSwitch}
                 </Link>
-              </li>
-              <li className="py-2">
-                <ThemeToggle />
               </li>
             </ul>
           </motion.div>

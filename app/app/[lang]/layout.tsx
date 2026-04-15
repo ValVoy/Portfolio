@@ -5,8 +5,6 @@ import { getDictionary } from '@/data/i18n'
 import { siteUrl } from '@/lib/config'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
-import { ThemeProvider } from '@/components/ui/ThemeProvider'
-import { ThemeTransition } from '@/components/ui/ThemeTransition'
 import '../globals.css'
 
 const spaceGrotesk = Space_Grotesk({
@@ -28,7 +26,7 @@ export type Locale = (typeof locales)[number]
 
 export const viewport: Viewport = {
   themeColor: '#0e0e10',
-  colorScheme: 'dark',
+  colorScheme: 'dark only',
 }
 
 export async function generateStaticParams() {
@@ -102,15 +100,12 @@ export default async function LocaleLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-surface text-on-surface">
-        <ThemeProvider>
-          <a href="#main-content" className="skip-link">
-            {lang === 'fr' ? 'Aller au contenu principal' : 'Skip to main content'}
-          </a>
-          <Header lang={lang} nav={dict.nav} />
-          <div className="pt-16">{children}</div>
-          <Footer footer={dict.footer} />
-          <ThemeTransition />
-        </ThemeProvider>
+        <a href="#main-content" className="skip-link">
+          {lang === 'fr' ? 'Aller au contenu principal' : 'Skip to main content'}
+        </a>
+        <Header lang={lang} nav={dict.nav} />
+        <div className="pt-16">{children}</div>
+        <Footer footer={dict.footer} />
       </body>
     </html>
   )

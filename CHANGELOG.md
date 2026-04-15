@@ -5,36 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.1.0] - 2026-04-09
+## [1.0.0] - 2026-04-14
 
 ### Added
-- Initial project structure for Next.js 16/React 19.
-- Tailwind CSS v4 configuration with "Kinetic Luminescence" design tokens.
-- Design System specification document (`stitch/DESIGN.md`).
-- Project governance documents for Claude and Gemini instances.
-- First automated audit report (#01).
+- **Phase 8:** Final production deployment on Vercel (`valentincheron.vercel.app`).
+- **Security:** Implemented strict Content-Security-Policy (CSP) and security headers.
+- **Environment:** Centralized `siteUrl` configuration via `NEXT_PUBLIC_SITE_URL`.
+- **Infrastructure:** Configured `proxy.ts` for localized routing and redirects (Next.js 16).
+- **i18n:** Extracted project role labels into localization dictionaries (`fr.ts`, `en.ts`).
+- **Optimization:** Centralized `THEME_DURATION` constants for synchronized theme transitions.
+- **SEO:** Verified and validated `sitemap.xml` and `robots.txt` with dynamic multi-language support.
 
 ### Changed
-- Refactored application for full i18n support (dynamic routing `/[lang]`).
-- Centralized translation system in `app/data/i18n`.
-- Moved `/governance` directory to project root for better separation of concerns.
-- Cleaned up duplicate configuration files in the `/app` directory.
-
-## [0.2.0] - 2026-04-09
-
-### Added
-- **Phase 1:** Real project data integration (4 projects, 14 skills, full profile).
-- **Phase 2:** Core UI component library (`Button`, `Card`, `Chip`) with Kinetic Luminescence styling.
-- **Phase 3:** Global layout components (`Header`, `Footer`) with language switcher and Glassmorphism.
-- **Phase 4 (Partial):** `Hero` section with availability badge, dynamic bio, and primary/tertiary CTAs.
-- TypeScript strict typings for all data models, including new `LocalizedString` for full i18n data support.
-- Environment variable support for sensitive contact info.
-- New audit reports (#04, #05) validating architecture, i18n consistency, and UI fidelity.
-
-### Fixed
-- **i18n:** Centralized all UI strings in `data/i18n/` (Header/Footer no longer use hardcoded translations).
-- **Dev Experience:** Fixed HMR/Hot Reload on Windows by enabling Webpack polling.
-- **UI:** Extended `Button` component to support both `button` and `anchor` elements with strict typing.
+- Updated README with deployment status and setup instructions.
+- Cleaned up development-specific configuration files (removed redundant `middleware.ts`).
 
 ## [0.3.0] - 2026-04-12
 
@@ -54,3 +38,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Refactored Tailwind v4 `@theme` configuration to fix dynamic theming (removed `inline` keyword).
 - Optimized section glows to avoid hard edges without using `overflow-hidden`.
 - Improved Navbar styling in light mode for better contrast.
+
+## [0.2.0] - 2026-04-09
+
+### Added
+- **Phase 1:** Real project data integration (4 projects, 14 skills, full profile).
+- **Phase 2:** Core UI component library (`Button`, `Card`, `Chip`) with Kinetic Luminescence styling.
+- **Phase 3:** Global layout components (`Header`, `Footer`) with language switcher and Glassmorphism.
+- **Phase 4 (Partial):** `Hero` section with availability badge, dynamic bio, and primary/tertiary CTAs.
+- TypeScript strict typings for all data models, including new `LocalizedString` for full i18n data support.
+- Environment variable support for sensitive contact info.
+- New audit reports (#04, #05) validating architecture, i18n consistency, and UI fidelity.
+
+### Fixed
+- **i18n:** Centralized all UI strings in `data/i18n/` (Header/Footer no longer use hardcoded translations).
+- **Dev Experience:** Fixed HMR/Hot Reload on Windows by enabling Webpack polling.
+- **UI:** Extended `Button` component to support both `button` and `anchor` elements with strict typing.
+
+## [0.1.0] - 2026-04-09
+
+### Added
+- Initial project structure for Next.js 16/React 19.
+- Tailwind CSS v4 configuration with "Kinetic Luminescence" design tokens.
+- Design System specification document (`stitch/DESIGN.md`).
+- Project governance documents for Claude and Gemini instances.
+- First automated audit report (#01).
+
+### Changed
+- Refactored application for full i18n support (dynamic routing `/[lang]`).
+- Centralized translation system in `app/data/i18n`.
+- Moved `/governance` directory to project root for better separation of concerns.
+- Cleaned up duplicate configuration files in the `/app` directory.

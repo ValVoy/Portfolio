@@ -31,3 +31,7 @@ Thumbs.db
 
 # Screenshots & captures (données potentiellement sensibles)
 docs/screen/
+docs/
+
+# Gouvernance interne (notes de session AI, audits, sauvegardes)
+governance/

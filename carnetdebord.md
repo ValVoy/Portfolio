@@ -15,3 +15,4 @@
 14-04-2026 | 17:33 | Phase 8 — déploiement Vercel : suppression liveUrl Koï's Story, README rewritten, push GitHub (ValVoy/Portfolio), fix build TS (Variants Framer Motion + as const i18n) | [ac4a9f8]
 14-04-2026 | 17:42 | Fix redirection i18n en production — proxy.ts renommé middleware.ts, fonction proxy → middleware (Next.js ignorait le fichier mal nommé) | [9f54dd7]
 14-04-2026 | 21:13 | Fix conflit middleware.ts / proxy.ts — Next.js 16 utilise proxy.ts, suppression du middleware.ts créé par erreur | [c6d91a6]
+14-04-2026 | 22:38 | Phase 8 terminée — valentincheron.vercel.app en ligne, sitemap/robots valides, navigation FR/EN, dark/light mode, pages projet : tout fonctionnel | [42f08d3]
