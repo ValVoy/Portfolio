@@ -181,7 +181,7 @@ export function Projects({ projects, lang, dict }: ProjectsProps) {
 
         {/* ── Desktop (lg+) ─────────────────────────────────────────────────── */}
         <div className="hidden lg:block">
-          <div className="relative">
+          <div className="relative" style={{ minHeight: '600px' }}>
             <AnimatePresence custom={direction} mode="popLayout">
               <motion.div
                 key={page}
@@ -201,7 +201,7 @@ export function Projects({ projects, lang, dict }: ProjectsProps) {
                     animate="visible"
                     className="flex"
                   >
-                    <ProjectCard project={project} lang={lang} dict={dict} />
+                    <ProjectCard project={project} lang={lang} dict={dict} priority={page === 0} />
                   </motion.div>
                 ))}
               </motion.div>

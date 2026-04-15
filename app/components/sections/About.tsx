@@ -43,8 +43,8 @@ export function About({ profile, skills, lang, dict }: AboutProps) {
             {dict.title}
           </h2>
           <p
-            className="font-body mt-2 text-xs uppercase tracking-[0.1em]"
-            style={{ color: 'var(--color-primary)' }}
+            className="font-body mt-2 text-sm"
+            style={{ color: 'var(--color-on-surface-variant)' }}
           >
             {dict.subtitle}
           </p>
@@ -65,7 +65,7 @@ export function About({ profile, skills, lang, dict }: AboutProps) {
                 {dict.formation}
               </dt>
               <dd
-                className="font-body mt-1 text-sm"
+                className="font-body mt-1 text-base"
                 style={{ color: 'var(--color-on-surface)' }}
               >
                 {dict.formationDetail}
@@ -79,7 +79,7 @@ export function About({ profile, skills, lang, dict }: AboutProps) {
                 {dict.location}
               </dt>
               <dd
-                className="font-body mt-1 text-sm"
+                className="font-body mt-1 text-base"
                 style={{ color: 'var(--color-on-surface)' }}
               >
                 {profile.location}

@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import { getDictionary, hasLocale } from '@/data/i18n'
 import { projects } from '@/data/projects'
 import { Chip } from '@/components/ui/Chip'
-import { ProjectImage } from '@/components/ui/ProjectImage'
+import { ProjectGallery } from '@/components/ui/ProjectGallery'
 import { t } from '@/lib/i18n'
 import { siteUrl as baseUrl } from '@/lib/config'
 import type { ProjectStatus } from '@/data/types'
@@ -145,7 +145,7 @@ export default async function ProjectPage({
 
       {/* ── Visuel ───────────────────────────────────────────────── */}
       <div className="relative mx-auto w-full max-w-4xl px-6 pb-16">
-        <ProjectImage image={project.image} title={project.title} variant="detail" />
+        <ProjectGallery image={project.image} images={project.images} title={project.title} />
       </div>
 
       {/* ── Content ──────────────────────────────────────────────── */}

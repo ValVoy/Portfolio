@@ -12,9 +12,10 @@ interface ProjectCardProps {
   project: Project
   lang: string
   dict: Dictionary['projects']
+  priority?: boolean
 }
 
-export function ProjectCard({ project, lang, dict }: ProjectCardProps) {
+export function ProjectCard({ project, lang, dict, priority = false }: ProjectCardProps) {
   if (project.placeholder) {
     return (
       <motion.div
@@ -25,6 +26,7 @@ export function ProjectCard({ project, lang, dict }: ProjectCardProps) {
           backgroundColor: 'var(--color-surface-container)',
           borderRadius: '1.5rem',
           boxShadow: '0 4px 32px color-mix(in srgb, var(--color-primary) 4%, transparent)',
+          minHeight: '600px',
         }}
       >
         {/* Zone image — grille de points + badge */}
@@ -92,10 +94,11 @@ export function ProjectCard({ project, lang, dict }: ProjectCardProps) {
         backgroundColor: 'var(--color-surface-container)',
         borderRadius: '1.5rem',
         boxShadow: '0 4px 32px color-mix(in srgb, var(--color-primary) 6%, transparent)',
+        minHeight: '600px',
       }}
     >
       {/* Thumbnail */}
-      <ProjectImage image={project.image} title={project.title} variant="card" />
+      <ProjectImage image={project.image} title={project.title} variant="card" priority={priority} />
 
       {/* Content */}
       <div className="flex flex-1 flex-col p-8">

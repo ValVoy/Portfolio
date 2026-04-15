@@ -5,6 +5,7 @@ interface ProjectImageProps {
   title: string
   /** 'card' = thumbnail 16:9 dans une carte | 'detail' = visuel large pleine largeur */
   variant: 'card' | 'detail'
+  priority?: boolean
 }
 
 function initials(title: string): string {
@@ -15,7 +16,7 @@ function initials(title: string): string {
     .join('')
 }
 
-export function ProjectImage({ image, title, variant }: ProjectImageProps) {
+export function ProjectImage({ image, title, variant, priority = false }: ProjectImageProps) {
   const isDetail = variant === 'detail'
 
   const wrapperStyle: React.CSSProperties = {
@@ -35,7 +36,7 @@ export function ProjectImage({ image, title, variant }: ProjectImageProps) {
           fill
           sizes={isDetail ? '(max-width: 768px) 100vw, 896px' : '(max-width: 768px) 100vw, 400px'}
           className="object-cover"
-          priority={isDetail}
+          priority={isDetail || priority}
         />
       </div>
     )

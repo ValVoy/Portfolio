@@ -16,6 +16,8 @@ export interface Project {
   liveUrl?: string
   /** Chemin relatif depuis /public, ex: "/projects/kois-story.webp" */
   image?: string
+  /** Galerie complète sur la page détail */
+  images?: string[]
   teamProject: boolean
   featured: boolean
   /** Slot réservé — contenu à remplir plus tard */

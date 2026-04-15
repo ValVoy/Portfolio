@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { profile } from '@/data/profile'
 import { t } from '@/lib/i18n'
 import { Button } from '@/components/ui/Button'
@@ -42,7 +41,7 @@ export function Hero({ lang, hero }: HeroProps) {
         </h1>
 
         {/* Title */}
-        <p className="font-display mt-4 text-2xl text-on-surface-variant sm:text-3xl">
+        <p className="font-display mt-4 text-2xl font-medium text-on-surface-variant sm:text-3xl">
           {t(profile.title, lang)}
         </p>
 
@@ -56,31 +55,18 @@ export function Hero({ lang, hero }: HeroProps) {
           <Button href={`/${lang}#projects`} variant="primary" size="lg">
             {hero.cta}
           </Button>
-          <Button href={`/${lang}#contact`} variant="tertiary" size="lg">
+          <Button href={`/${lang}#contact`} variant="secondary" size="lg">
             {hero.ctaSecondary}
           </Button>
         </div>
 
-        {/* Séparateur néon — mobile/tablette uniquement */}
-        <div className="lg:hidden mt-20 flex justify-center">
-          <motion.div
-            aria-hidden="true"
-            className="h-[3px] rounded-full w-1/3 sm:w-1/4"
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            viewport={{ once: true }}
-            animate={{ opacity: [1, 0.55, 1] }}
-            transition={{
-              scaleX: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.3 },
-              opacity: { duration: 2.5, repeat: Infinity, ease: 'easeInOut', delay: 1 },
-            }}
+        {/* Séparateur — mobile/tablette uniquement */}
+        <div className="lg:hidden mt-20 flex justify-center" aria-hidden="true">
+          <div
+            className="h-px w-1/2"
             style={{
-              backgroundColor: 'var(--color-primary)',
-              boxShadow: [
-                '0 0 4px 0px var(--color-primary)',
-                '0 0 14px 3px color-mix(in srgb, var(--color-primary) 65%, transparent)',
-                '0 0 32px 6px color-mix(in srgb, var(--color-primary) 25%, transparent)',
-              ].join(', '),
+              background:
+                'linear-gradient(to right, transparent, color-mix(in srgb, var(--color-primary) 35%, transparent), transparent)',
             }}
           />
         </div>
