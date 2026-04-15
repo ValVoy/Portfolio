@@ -3,6 +3,7 @@ import { getDictionary, hasLocale } from '@/data/i18n'
 import { Hero } from '@/components/sections/Hero'
 import { Projects } from '@/components/sections/Projects'
 import { About } from '@/components/sections/About'
+import { Now } from '@/components/sections/Now'
 import { Contact } from '@/components/sections/Contact'
 import { projects } from '@/data/projects'
 import { skills } from '@/data/skills'
@@ -40,6 +41,7 @@ export default async function Home({ params }: PageProps<'/[lang]'>) {
         <Hero lang={lang} hero={dict.hero} />
         <Projects projects={projects} lang={lang} dict={dict.projects} />
         <About profile={profile} skills={skills} lang={lang} dict={dict.about} />
+        <Now lang={lang} dict={dict.now} />
         <Contact social={profile.social} dict={dict.contact} />
       </main>
     </>

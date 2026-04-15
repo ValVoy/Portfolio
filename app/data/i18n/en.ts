@@ -4,6 +4,13 @@ export const en: Dictionary = {
   home: {
     tagline: 'Portfolio — under construction',
   },
+  now: {
+    title: 'Right now',
+    updated: 'Updated',
+    building: 'In progress',
+    repoSoon: 'Coming to GitHub',
+    repoLabel: 'View on GitHub',
+  },
   hero: {
     cta: 'See my projects',
     ctaSecondary: 'Get in touch',

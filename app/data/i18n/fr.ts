@@ -2,6 +2,13 @@ export const fr = {
   home: {
     tagline: 'Portfolio — en construction',
   },
+  now: {
+    title: 'En ce moment',
+    updated: 'Mis à jour le',
+    building: 'En construction',
+    repoSoon: 'Bientôt sur GitHub',
+    repoLabel: 'Voir sur GitHub',
+  },
   hero: {
     cta: 'Voir mes projets',
     ctaSecondary: 'Me contacter',
