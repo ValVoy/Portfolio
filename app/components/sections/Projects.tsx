@@ -105,7 +105,7 @@ export function Projects({ projects, lang, dict }: ProjectsProps) {
   }
 
   return (
-    <section id="projects" className="w-full py-[160px]">
+    <section id="projects" className="w-full py-20 lg:py-[160px]">
       <div className="mx-auto w-full max-w-6xl px-6">
 
         {/* Section header */}

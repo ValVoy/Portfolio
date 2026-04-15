@@ -16,7 +16,7 @@ const categoryKeys = ['language', 'framework', 'tool'] as const
 
 export function About({ profile, skills, lang, dict }: AboutProps) {
   return (
-    <section id="about" className="relative w-full py-[160px]">
+    <section id="about" className="relative w-full py-20 lg:py-[160px]">
       {/* Ambient glow — ellipse réduite pour ne pas déborder sur les sections adjacentes */}
       <div
         aria-hidden="true"

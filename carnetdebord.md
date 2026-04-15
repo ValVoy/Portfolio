@@ -18,3 +18,4 @@
 14-04-2026 | 22:38 | Phase 8 terminée — valentincheron.vercel.app en ligne, sitemap/robots valides, navigation FR/EN, dark/light mode, pages projet : tout fonctionnel | [42f08d3]
 15-04-2026 | 11:27 | Suppression light mode (identité visuelle unique dark), package.json 1.0.0, governance/ retiré du repo (.gitignore + git rm --cached) | [0fdff1a]
 15-04-2026 | 11:46 | Slider projets 3×3 — AnimatePresence directionnel, dots animés, flèches, 5 placeholders avec shimmer et badge À venir | [c0be2e5]
+15-04-2026 | 12:11 | Responsive mobile/tablette section projets — scroll horizontal CSS snap, peek 75vw mobile / 45vw tablette, dots synchro scroll | [18e3054]

@@ -50,7 +50,7 @@ const itemVariants: Variants = {
 
 export function Contact({ social, dict }: ContactProps) {
   return (
-    <section id="contact" className="relative w-full py-[160px]">
+    <section id="contact" className="relative w-full py-20 lg:py-[160px]">
       {/* Ambient glow — ellipse réduite pour ne pas déborder sur les sections adjacentes */}
       <div
         aria-hidden="true"
