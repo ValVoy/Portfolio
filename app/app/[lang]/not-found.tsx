@@ -147,8 +147,8 @@ export default function NotFound() {
             >
               {'$ # '}{typed}
               <motion.span
-                animate={{ opacity: [1, 0, 1] }}
-                transition={{ repeat: Infinity, duration: 0.9, ease: 'steps(1)' }}
+                animate={{ opacity: [1, 1, 0, 0] }}
+                transition={{ repeat: Infinity, duration: 1, ease: 'linear', times: [0, 0.49, 0.5, 1] }}
                 style={{ color: '#acaaad' }}
               >
                 ▋

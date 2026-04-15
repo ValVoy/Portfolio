@@ -24,3 +24,4 @@
 15-04-2026 | 22:22 | Transition de page fluide + nettoyage textes tirets cadratin | [b77c3d6]
 15-04-2026 | 22:28 | Easter egg terminal — backtick ou bouton footer, commandes whoami/ls/cat/git log/contact, header macOS, historique ↑↓ | [bf8e6aa]
 15-04-2026 | 22:36 | Navigation entre projets — prev/next en bas de page détail, filtre placeholders, labels discrets + titre projet, traductions FR/EN | [e44d882]
+15-04-2026 | 22:44 | Page 404 custom style terminal — fenêtre macOS, lignes animées, typewriter sur noms de projets en boucle, curseur clignotant | [8a02e8a]

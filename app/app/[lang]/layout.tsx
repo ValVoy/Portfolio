@@ -6,6 +6,7 @@ import { siteUrl } from '@/lib/config'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { Terminal } from '@/components/ui/Terminal'
+import { ScrollProgress } from '@/components/ui/ScrollProgress'
 import '../globals.css'
 
 const spaceGrotesk = Space_Grotesk({
@@ -104,6 +105,7 @@ export default async function LocaleLayout({
         <a href="#main-content" className="skip-link">
           {lang === 'fr' ? 'Aller au contenu principal' : 'Skip to main content'}
         </a>
+        <ScrollProgress />
         <Terminal />
         <Header lang={lang} nav={dict.nav} />
         <div className="pt-16">{children}</div>
