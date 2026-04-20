@@ -50,9 +50,9 @@ export function Hero({ lang, hero }: HeroProps) {
           />
         </p>
 
-        {/* Bio */}
+        {/* Tagline */}
         <p className="font-body mt-6 max-w-xl text-base leading-relaxed text-on-surface-variant">
-          {t(profile.bio, lang)}
+          {hero.tagline}
         </p>
 
         {/* CTAs */}

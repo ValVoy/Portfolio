@@ -28,3 +28,4 @@
 15-04-2026 | 22:47 | Barre de progression scroll — ScrollProgress fixe 2px top-0 gradient primary + spring, fix curseur clignotant 404 | [a224ae3]
 15-04-2026 | 22:54 | OG image dynamique par page projet — ImageResponse 1200x630, titre/description/stack chips/attribution, runtime edge | [53eb2c4]
 20-04-2026 | 15:11 | Refonte section "En ce moment" — alignement max-w-6xl + titre text-4xl/5xl, layout 2 colonnes desktop (3fr/2fr), mise à jour données LifeOS v3 (Next.js 15 / Drizzle / Better Auth), screenshots dark/light avec toggle cross-fade, lightbox plein écran, badge disponibilité vert animé | [96db2ce]
+20-04-2026 | 18:07 | Migration hébergement Vercel → Coolify — URLs dynamiques (NEXT_PUBLIC_SITE_URL), suppression URL Vercel hardcodée dans OG image projets, fallback config.ts mis à jour, webhook GitHub auto-deploy configuré | [ed24377]

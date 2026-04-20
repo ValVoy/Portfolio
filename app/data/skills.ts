@@ -19,11 +19,17 @@ export const skills: Skill[] = [
   // Outils
   { name: 'Git / GitHub', category: 'tool', level: 75 },
   { name: 'Devise', category: 'tool', level: 65 },
-  { name: 'Nokogiri', category: 'tool', level: 60 },
+  { name: 'Notion', category: 'tool', level: 85 },
+
+  // IA
+  { name: 'Claude', category: 'ai', level: 90 },
+  { name: 'Gemini', category: 'ai', level: 75 },
+  { name: 'OpenAI', category: 'ai', level: 75 },
 ]
 
 export const skillsByCategory = {
   language: skills.filter((s) => s.category === 'language'),
   framework: skills.filter((s) => s.category === 'framework'),
   tool: skills.filter((s) => s.category === 'tool'),
+  ai: skills.filter((s) => s.category === 'ai'),
 }

@@ -12,7 +12,7 @@ interface AboutProps {
   dict: Dictionary['about']
 }
 
-const categoryKeys = ['language', 'framework', 'tool'] as const
+const categoryKeys = ['language', 'framework', 'tool', 'ai'] as const
 
 export function About({ profile, skills, lang, dict }: AboutProps) {
   return (

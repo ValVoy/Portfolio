@@ -15,8 +15,9 @@ export const en: Dictionary = {
     cta: 'See my projects',
     ctaSecondary: 'Get in touch',
     availability: 'Open to new opportunities',
-    titlePrefix: 'Junior developer',
-    titleSuffixes: ['fullstack', 'Ruby on Rails', 'React · Next.js'],
+    titlePrefix: 'Developer',
+    titleSuffixes: ['fullstack × AI', 'Ruby on Rails', 'React · Next.js'],
+    tagline: 'I build web apps leveraging AI to go further, faster.',
   },
   nav: {
     projects: 'Projects',
@@ -51,6 +52,7 @@ export const en: Dictionary = {
       language: 'Languages',
       framework: 'Frameworks & Libraries',
       tool: 'Tools',
+      ai: 'Artificial Intelligence',
     },
   },
   contact: {

@@ -25,7 +25,7 @@ export interface Project {
   year: number
 }
 
-export type SkillCategory = 'language' | 'framework' | 'tool' | 'other'
+export type SkillCategory = 'language' | 'framework' | 'tool' | 'ai' | 'other'
 
 export interface Skill {
   name: string

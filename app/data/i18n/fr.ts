@@ -13,8 +13,9 @@ export const fr = {
     cta: 'Voir mes projets',
     ctaSecondary: 'Me contacter',
     availability: 'Disponible pour de nouvelles opportunités',
-    titlePrefix: 'Développeur web',
-    titleSuffixes: ['fullstack junior', 'Ruby on Rails', 'React · Next.js'],
+    titlePrefix: 'Développeur',
+    titleSuffixes: ['fullstack × IA', 'Ruby on Rails', 'React · Next.js'],
+    tagline: "Je construis des applications web en tirant parti de l'IA pour aller plus loin, plus vite.",
   },
   nav: {
     projects: 'Projets',
@@ -49,6 +50,7 @@ export const fr = {
       language: 'Langages',
       framework: 'Frameworks & Bibliothèques',
       tool: 'Outils',
+      ai: 'Intelligence Artificielle',
     },
   },
   contact: {

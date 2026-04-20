@@ -5,11 +5,13 @@ const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? ''
 export const profile: Profile = {
   name: 'Valentin Chéron',
   title: {
-    fr: 'Développeur web fullstack junior',
-    en: 'Junior fullstack web developer',  },
+    fr: 'Développeur fullstack × IA',
+    en: 'Fullstack developer × AI',
+  },
   bio: {
-    fr: "Développeur web junior formé à The Hacking Project, à l'aise avec Ruby on Rails et en train de monter en compétence sur React / Next.js. J'aime construire des interfaces soignées et des architectures lisibles.",
-    en: "Junior web developer trained at The Hacking Project, comfortable with Ruby on Rails and currently levelling up on React / Next.js. I enjoy building clean interfaces and readable architectures.",  },
+    fr: "Développeur web formé à The Hacking Project, je construis des applications fullstack en tirant parti de l'IA comme levier de productivité et de qualité. À l'aise sur Ruby on Rails et Next.js, j'utilise Claude, Gemini et OpenAI pour livrer plus vite et mieux qu'en solo.",
+    en: "Web developer trained at The Hacking Project, I build fullstack applications by leveraging AI as a productivity and quality multiplier. Comfortable with Ruby on Rails and Next.js, I use Claude, Gemini and OpenAI to ship faster and with a higher standard than I could alone.",
+  },
   location: 'France',
   social: [
     {
