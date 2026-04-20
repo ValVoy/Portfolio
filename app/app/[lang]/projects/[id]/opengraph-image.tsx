@@ -149,7 +149,7 @@ export default async function OgImage({
               fontFamily: 'sans-serif',
             }}
           >
-            valentincheron.vercel.app
+            {(process.env.NEXT_PUBLIC_SITE_URL ?? '').replace('https://', '').replace('http://', '')}
           </p>
         </div>
       </div>

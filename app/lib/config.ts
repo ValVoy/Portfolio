@@ -3,4 +3,4 @@
  * Utilisée pour les canonicals, métadonnées Open Graph, sitemap et robots.txt.
  */
 export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://portfolio.vercel.app'
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://valentincheron.dev'
