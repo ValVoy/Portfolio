@@ -45,3 +45,9 @@ Un portfolio bilingue (FR/EN) haute performance, vitrine technique d'excellence.
 1. **Rapports d'Audit de Session :** Dans `/governance/gemini/`.
 2. **Audit de Sécurité & SEO :** Notes techniques sur l'indexation et le hardening.
 3. **Mise à jour du CHANGELOG.md :** Après chaque session validée.
+
+---
+
+## 6. Lecture des Dossiers Gouvernance (RÈGLE TECHNIQUE)
+
+> **⚠️ Attention Glob & .gitignore :** L'outil `Glob` respecte le `.gitignore` et ne voit **pas** les fichiers dans `governance/`. Pour lister ou lire ces dossiers, toujours utiliser `Bash ls <chemin>` ou `Read` avec le chemin complet.

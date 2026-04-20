@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-04-15
+
+### Added
+- **Features:** Interactive Terminal easter egg and custom 404 page with macOS terminal styling and typewriter effect.
+- **Sections:** "Now" (En ce moment) section featuring current projects (LifeOs), readings, and learning focus.
+- **UI:** Hero section with `CyclingText` for dynamic roles and enhanced "Kinetic" ambient glow.
+- **Navigation:** Project-to-project navigation (Previous/Next) on detail pages for better user flow.
+- **Components:** `ProjectGallery` with 16:9 ratio, touch-swipe support, slide animations, and lightbox integration.
+- **SEO:** Dynamic Open Graph (OG) image generation for each project using Next.js `ImageResponse` on Edge runtime.
+- **UX:** Smooth page transitions (blur/fade) and a custom scroll progress bar with spring physics.
+- **Data:** Full integration of real project data and images (EventBrite, Atomic Design, RPG, FreeDoc, Chatbot, etc.).
+
+### Changed
+- **Identity:** Transitioned to a "Dark Only" unified theme to strengthen the "Kinetic Luminescence" visual identity.
+- **Visuals:** Optimized mobile/tablet responsiveness for the project slider with CSS snap-scroll and peek effects.
+- **Content:** Refined all typography, including dash normalization (em-dash) and spacing.
+
+### Fixed
+- **SEO:** Resolved 404 metadata conflicts and improved dynamic OG image parameter handling.
+- **UX:** Fixed terminal cursor blinking animation using keyframes for better cross-browser consistency.
+
 ## [1.0.0] - 2026-04-14
 
 ### Added

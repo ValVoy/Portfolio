@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/vcher/Desktop/Appli_Maison/APP/LifeOS_v3/**)",
+      "Read(//mnt/c/Users/vcher/Desktop/Appli_Maison/APP/**)",
+      "Bash(cp \"C:/Users/vcher/Desktop/Appli_Maison/APP/LifeOS_v3/docs/snap/20_04_2026_dark_dashboard.png\" \"C:/Users/vcher/Desktop/Appli_Maison/APP/Portfolio/app/public/now/lifeos-dark.png\")",
+      "Bash(cp \"C:/Users/vcher/Desktop/Appli_Maison/APP/LifeOS_v3/docs/snap/20_04_2026_light_dashboard.png\" \"C:/Users/vcher/Desktop/Appli_Maison/APP/Portfolio/app/public/now/lifeos-light.png\")"
+    ]
+  }
+}

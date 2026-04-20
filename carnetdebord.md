@@ -26,3 +26,4 @@
 15-04-2026 | 22:36 | Navigation entre projets — prev/next en bas de page détail, filtre placeholders, labels discrets + titre projet, traductions FR/EN | [e44d882]
 15-04-2026 | 22:44 | Page 404 custom style terminal — fenêtre macOS, lignes animées, typewriter sur noms de projets en boucle, curseur clignotant | [8a02e8a]
 15-04-2026 | 22:47 | Barre de progression scroll — ScrollProgress fixe 2px top-0 gradient primary + spring, fix curseur clignotant 404 | [a224ae3]
+15-04-2026 | 22:54 | OG image dynamique par page projet — ImageResponse 1200x630, titre/description/stack chips/attribution, runtime edge | [53eb2c4]

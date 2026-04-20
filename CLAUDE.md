@@ -148,6 +148,8 @@ Fichier `carnetdebord.md` à la **racine `Portfolio/`** (pas dans `app/`) — **
 
 > **Note :** `app/CLAUDE.md` et `app/AGENTS.md` sont des fichiers auto-générés par `create-next-app` pour guider les agents IA sur la version de Next.js. Ne pas modifier ni supprimer.
 
+> **⚠️ Attention Glob & .gitignore :** L'outil `Glob` respecte le `.gitignore` et ne voit **pas** les fichiers dans `governance/`. Pour lister ou lire ces dossiers, toujours utiliser `Bash ls <chemin>` ou `Read` avec le chemin complet.
+
 ### Protocole de session
 **Début :** lire `/governance/gemini/` (fichiers non archivés) → créer `claude_NN.md` avec le contexte de la session.
 

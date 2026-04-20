@@ -11,38 +11,57 @@ export interface NowItem {
   href?: string | { fr: string; en: string }
 }
 
+export type AvailabilityStatus = 'available' | 'open' | 'unavailable'
+
 export interface NowProject {
   title: string
   description: { fr: string; en: string }
   stack: string[]
+  screenshots: { dark: string; light: string }
   /** null tant que le repo n'est pas public */
   repoUrl: string | null
 }
 
 export const now: {
   updatedAt: string
+  availability: {
+    status: AvailabilityStatus
+    label: { fr: string; en: string }
+  }
   project: NowProject
   items: NowItem[]
 } = {
   /** Format JJ/MM/AAAA */
-  updatedAt: '15/04/2026',
+  updatedAt: '20/04/2026',
+
+  availability: {
+    status: 'available',
+    label: {
+      fr: 'Disponible pour une mission',
+      en: 'Available for a project',
+    },
+  },
 
   project: {
-    title: 'LifeOs',
+    title: 'LifeOS v3',
     description: {
-      fr: 'ERP personnel multi-tenant pour gérer vie pro, famille, études et contenus depuis une seule app. Ruby on Rails 8, Hotwire, architecture modulaire.',
-      en: 'Personal multi-tenant ERP to manage work, family, studies and content from one app. Ruby on Rails 8, Hotwire, modular architecture.',
+      fr: 'Hub de vie multi-tenant : gestion pro (projets, timer, facturation), famille et perso depuis une seule app. Next.js 15, Drizzle ORM, auth multi-workspace, design system "Kinetic Luminescence".',
+      en: 'Multi-tenant life hub: pro management (projects, timer, invoicing), family and personal — all in one app. Next.js 15, Drizzle ORM, multi-workspace auth, "Kinetic Luminescence" design system.',
     },
-    stack: ['Ruby on Rails 8', 'Hotwire', 'Tailwind v4', 'SQLite'],
-    repoUrl: null, // Renseigner quand le repo sera public
+    stack: ['Next.js 15', 'TypeScript', 'Tailwind v4', 'Drizzle ORM', 'Better Auth', 'SQLite / Turso'],
+    screenshots: {
+      dark: '/now/lifeos-dark.png',
+      light: '/now/lifeos-light.png',
+    },
+    repoUrl: null,
   },
 
   items: [
     {
       label: { fr: "J'explore", en: 'Exploring' },
       content: {
-        fr: 'JavaScript fondamental → TypeScript : consolider le DOM, ES6+ et l\'architecture modulaire avant de typer fort',
-        en: 'Fundamentals to TypeScript: solidifying DOM, ES6+ and modular architecture before going type-safe',
+        fr: 'Next.js 15 App Router en profondeur : Server Actions, multi-tenant auth avec Better Auth, Drizzle ORM et isolation stricte des données par workspace',
+        en: 'Deep-diving Next.js 15 App Router: Server Actions, multi-tenant auth with Better Auth, Drizzle ORM and strict workspace-scoped data isolation',
       },
     },
     {
