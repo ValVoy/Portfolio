@@ -59,7 +59,7 @@ export default async function OgImage({ params }: { params: Promise<{ lang: stri
             fontFamily: 'sans-serif',
           }}
         >
-          {isFr ? 'Développeur web fullstack junior' : 'Junior fullstack web developer'}
+          {isFr ? 'Développeur fullstack × IA' : 'Fullstack developer × AI'}
         </p>
 
         {/* Glow effect */}

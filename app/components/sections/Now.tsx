@@ -161,7 +161,7 @@ export function Now({ lang, dict }: NowProps) {
                   >
                     <Image
                       src={now.project.screenshots[activeTheme]}
-                      alt={`LifeOS v3 — thème ${activeTheme}`}
+                      alt={`LifeOS v3 · thème ${activeTheme}`}
                       width={1536}
                       height={768}
                       className="w-full"
@@ -291,7 +291,7 @@ export function Now({ lang, dict }: NowProps) {
                       className="font-body mt-2 inline-block text-xs font-medium transition-opacity hover:opacity-70"
                       style={{ color: 'var(--color-primary-fixed-dim)' }}
                     >
-                      Voir sur Amazon ↗
+                      {(item.linkLabel?.[l] ?? (l === 'fr' ? 'Voir le lien' : 'View link'))} ↗
                     </a>
                   )}
                   {i < now.items.length - 1 && (
@@ -330,7 +330,7 @@ export function Now({ lang, dict }: NowProps) {
             >
               <Image
                 src={now.project.screenshots[activeTheme]}
-                alt={`LifeOS v3 — thème ${activeTheme}`}
+                alt={`LifeOS v3 · thème ${activeTheme}`}
                 width={1536}
                 height={768}
                 className="w-full"

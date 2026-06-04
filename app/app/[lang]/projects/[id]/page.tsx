@@ -175,7 +175,7 @@ export default async function ProjectPage({
                   rel="noopener noreferrer"
                   className="font-body text-sm font-medium transition-opacity hover:opacity-70"
                   style={{ color: 'var(--color-primary-fixed-dim)' }}
-                  aria-label={`${d.openRepo} — ${project.title}`}
+                  aria-label={`${d.openRepo} · ${project.title}`}
                 >
                   {d.openRepo} →
                 </a>
@@ -187,7 +187,7 @@ export default async function ProjectPage({
                   rel="noopener noreferrer"
                   className="font-body text-sm font-medium transition-opacity hover:opacity-70"
                   style={{ color: 'var(--color-tertiary)' }}
-                  aria-label={`${d.openLive} — ${project.title}`}
+                  aria-label={`${d.openLive} · ${project.title}`}
                 >
                   {d.openLive} ↗
                 </a>

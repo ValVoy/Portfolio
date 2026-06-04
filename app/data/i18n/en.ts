@@ -8,7 +8,7 @@ export const en: Dictionary = {
     title: 'Right now',
     updated: 'Updated',
     building: 'In progress',
-    repoSoon: 'Coming to GitHub',
+    repoSoon: 'Private repo',
     repoLabel: 'View on GitHub',
   },
   hero: {
@@ -16,7 +16,7 @@ export const en: Dictionary = {
     ctaSecondary: 'Get in touch',
     availability: 'Open to new opportunities',
     titlePrefix: 'Developer',
-    titleSuffixes: ['fullstack × AI', 'Ruby on Rails', 'React · Next.js'],
+    titleSuffixes: ['fullstack × AI', 'Ruby on Rails', 'React · Next.js', 'TypeScript'],
     tagline: 'I build web apps leveraging AI to go further, faster.',
   },
   nav: {
@@ -37,7 +37,7 @@ export const en: Dictionary = {
     team: 'Team',
     solo: 'Solo',
     viewCode: 'Source code',
-    viewLive: 'Live demo',
+    viewLive: 'Visit site',
     prevPage: 'Previous page',
     nextPage: 'Next page',
     comingSoon: 'Coming soon',
@@ -75,7 +75,7 @@ export const en: Dictionary = {
     typeLabel: 'Type',
     yearLabel: 'Year',
     openRepo: 'Source code',
-    openLive: 'Live demo',
+    openLive: 'Visit site',
     prevProject: 'Previous project',
     nextProject: 'Next project',
     roles: {

@@ -42,11 +42,11 @@ export async function generateMetadata({
   const isFr = lang === 'fr'
 
   const title = isFr
-    ? 'Valentin Chéron — Développeur web fullstack junior'
-    : 'Valentin Chéron — Junior fullstack web developer'
+    ? 'Valentin Chéron · Développeur fullstack × IA'
+    : 'Valentin Chéron · Fullstack developer × AI'
   const description = isFr
-    ? 'Portfolio de Valentin Chéron, développeur web fullstack junior formé à The Hacking Project. Ruby on Rails, Next.js, TypeScript.'
-    : 'Portfolio of Valentin Chéron, junior fullstack web developer trained at The Hacking Project. Ruby on Rails, Next.js, TypeScript.'
+    ? "Portfolio de Valentin Chéron, développeur fullstack × IA formé à The Hacking Project. Ruby on Rails, Next.js, TypeScript et l'IA (Claude, Gemini, OpenAI) comme levier de productivité."
+    : 'Portfolio of Valentin Chéron, fullstack developer × AI trained at The Hacking Project. Ruby on Rails, Next.js, TypeScript and AI (Claude, Gemini, OpenAI) as a productivity multiplier.'
 
   return {
     title: {

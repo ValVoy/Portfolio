@@ -5,16 +5,18 @@ export const skills: Skill[] = [
   { name: 'Ruby', category: 'language', level: 80 },
   { name: 'HTML', category: 'language', level: 90 },
   { name: 'CSS', category: 'language', level: 85 },
-  { name: 'JavaScript', category: 'language', level: 65 },
-  { name: 'TypeScript', category: 'language', level: 50 },
-  { name: 'SQL', category: 'language', level: 60 },
+  { name: 'JavaScript', category: 'language', level: 70 },
+  { name: 'TypeScript', category: 'language', level: 70 },
+  { name: 'SQL', category: 'language', level: 65 },
 
   // Frameworks & librairies
+  { name: 'Next.js', category: 'framework', level: 70 },
   { name: 'Ruby on Rails', category: 'framework', level: 75 },
+  { name: 'Tailwind CSS', category: 'framework', level: 85 },
+  { name: 'Framer Motion', category: 'framework', level: 70 },
+  { name: 'Drizzle ORM', category: 'framework', level: 65 },
   { name: 'Sinatra', category: 'framework', level: 70 },
   { name: 'Hotwire (Turbo + Stimulus)', category: 'framework', level: 65 },
-  { name: 'Next.js', category: 'framework', level: 40 },
-  { name: 'Tailwind CSS', category: 'framework', level: 75 },
 
   // Outils
   { name: 'Git / GitHub', category: 'tool', level: 75 },

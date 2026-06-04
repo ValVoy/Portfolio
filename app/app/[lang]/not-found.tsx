@@ -119,7 +119,7 @@ export default function NotFound() {
                 marginLeft: '-52px',
               }}
             >
-              bash — 404 not found
+              bash · 404 not found
             </span>
           </div>
 

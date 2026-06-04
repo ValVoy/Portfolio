@@ -6,7 +6,7 @@ export const fr = {
     title: 'En ce moment',
     updated: 'Mis à jour le',
     building: 'En construction',
-    repoSoon: 'Bientôt sur GitHub',
+    repoSoon: 'Dépôt privé',
     repoLabel: 'Voir sur GitHub',
   },
   hero: {
@@ -14,7 +14,7 @@ export const fr = {
     ctaSecondary: 'Me contacter',
     availability: 'Disponible pour de nouvelles opportunités',
     titlePrefix: 'Développeur',
-    titleSuffixes: ['fullstack × IA', 'Ruby on Rails', 'React · Next.js'],
+    titleSuffixes: ['fullstack × IA', 'Ruby on Rails', 'React · Next.js', 'TypeScript'],
     tagline: "Je construis des applications web en tirant parti de l'IA pour aller plus loin, plus vite.",
   },
   nav: {
@@ -35,7 +35,7 @@ export const fr = {
     team: 'Équipe',
     solo: 'Solo',
     viewCode: 'Code source',
-    viewLive: 'Voir la démo',
+    viewLive: 'Voir le site',
     prevPage: 'Page précédente',
     nextPage: 'Page suivante',
     comingSoon: 'À venir',
@@ -73,7 +73,7 @@ export const fr = {
     typeLabel: 'Type',
     yearLabel: 'Année',
     openRepo: 'Code source',
-    openLive: 'Voir la démo',
+    openLive: 'Voir le site',
     prevProject: 'Projet précédent',
     nextProject: 'Projet suivant',
     roles: {

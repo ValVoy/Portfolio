@@ -2,6 +2,53 @@ import type { Project } from './types'
 
 export const projects: Project[] = [
   {
+    id: 'ope-cdm',
+    title: 'Pronos Coupe du Monde',
+    description: {
+      fr: "Application de pronostics pour la Coupe du Monde 2026 : pronostique chaque match, marque des points, grimpe au classement. En ligne sur pronos.stormteam.fr.",
+      en: "Predictions app for the 2026 World Cup: predict each match, earn points, climb the leaderboard. Live at pronos.stormteam.fr.",
+    },
+    longDescription: {
+      fr: "Application web complète développée pour StormTeam (Sarah & Mathieu) et déployée en V1. Les participants pronostiquent les résultats des matchs et s'affrontent dans un classement général. Verrouillage automatique des pronostics 15 min avant le coup d'envoi, gestion des tirs au but, classement temps réel avec règles de départage, bracket à propagation automatique des qualifiés tout au long du tournoi. Authentification sécurisée (rate limiting, Bcrypt, sessions), digest email quotidien, conformité RGPD (droit à l'oubli, consentement marketing) et durcissement Cloudflare. Architecture multi-tenant (isolation par workspace_id), PWA optimisée mobile.",
+      en: "Full web application built for StormTeam (Sarah & Mathieu) and shipped as a V1. Participants predict match results and compete in a general leaderboard. Predictions auto-lock 15 min before kickoff, with penalty-shootout handling, real-time leaderboard with precise tie-breaking, and an automated bracket that propagates qualifiers throughout the tournament. Secure authentication (rate limiting, Bcrypt, sessions), daily email digest, GDPR compliance (right to erasure, marketing consent) and Cloudflare hardening. Multi-tenant architecture (workspace_id isolation), mobile-optimized PWA.",
+    },
+    stack: ['Next.js 15', 'TypeScript', 'Tailwind v4', 'Framer Motion', 'Drizzle ORM', 'Turso'],
+    role: 'fullstack',
+    status: 'completed',
+    liveUrl: 'https://pronos.stormteam.fr',
+    image: '/projects/ope-cdm.webp',
+    images: [
+      '/projects/ope-cdm.webp',
+      '/projects/ope-cdm-mobile.webp',
+    ],
+    teamProject: false,
+    featured: true,
+    year: 2026,
+  },
+  {
+    id: 'lifeos-v3',
+    title: 'LifeOS v3',
+    description: {
+      fr: "ERP personnel multi-tenant : gestion pro (clients, projets, time tracking, facturation), famille et perso depuis une seule application, design system « Kinetic Luminescence ».",
+      en: "Multi-tenant personal ERP: pro management (clients, projects, time tracking, invoicing), family and personal in a single app, with the \"Kinetic Luminescence\" design system.",
+    },
+    longDescription: {
+      fr: "Hub de vie personnel construit autour du concept « Kinetic Luminescence » : design cinétique et atmosphères contextuelles selon le workspace actif (Pro, Famille, Perso), interface Bento modulaire. Module Pro complet (clients, projets, tâches et sous-tâches, time tracking, rollups financiers), module Famille (membres, calendrier partagé, courses & catalogue, budget familial), module Légal (CGU, confidentialité, export, suppression). Isolation logique stricte par workspace_id avec validation anti-IDOR systématique, conformité RGPD (droit à l'effacement, export JSON/CSV, gestion du consentement). Projet en cours, développé en lead avec gouvernance IA Claude + Gemini.",
+      en: "Personal life hub built on the \"Kinetic Luminescence\" concept: kinetic design and contextual atmospheres based on the active workspace (Pro, Family, Personal), with a modular Bento interface. Full Pro module (clients, projects, tasks and sub-tasks, time tracking, financial rollups), Family module (members, shared calendar, shopping & catalog, family budget), Legal module (TOS, privacy, export, deletion). Strict logical isolation via workspace_id with systematic anti-IDOR validation, GDPR compliance (right to erasure, JSON/CSV export, consent management). Ongoing project, led with a Claude + Gemini AI governance workflow.",
+    },
+    stack: ['Next.js 16', 'React 19', 'TypeScript', 'Tailwind v4', 'Drizzle ORM', 'Better Auth', 'Turso'],
+    role: 'lead',
+    status: 'in_progress',
+    image: '/projects/lifeos-v3.webp',
+    images: [
+      '/projects/lifeos-v3.webp',
+      '/projects/lifeos-v3-light.webp',
+    ],
+    teamProject: false,
+    featured: true,
+    year: 2026,
+  },
+  {
     id: 'kois-story',
     title: "Koï's Story",
     description: {
@@ -158,32 +205,6 @@ export const projects: Project[] = [
     image: '/projects/crazy-scrap.webp',
     teamProject: false,
     featured: true,
-    year: 2026,
-  },
-  {
-    id: 'placeholder-08',
-    title: '—',
-    description: { fr: '', en: '' },
-    longDescription: { fr: '', en: '' },
-    stack: [],
-    role: 'fullstack',
-    status: 'in_progress',
-    teamProject: false,
-    featured: false,
-    placeholder: true,
-    year: 2026,
-  },
-  {
-    id: 'placeholder-09',
-    title: '—',
-    description: { fr: '', en: '' },
-    longDescription: { fr: '', en: '' },
-    stack: [],
-    role: 'fullstack',
-    status: 'in_progress',
-    teamProject: false,
-    featured: false,
-    placeholder: true,
     year: 2026,
   },
 ]

@@ -90,7 +90,7 @@ export function ProjectGallery({ image, images, title }: ProjectGalleryProps) {
             >
               <Image
                 src={allImages[active]}
-                alt={`${title} — aperçu ${active + 1}`}
+                alt={`${title} · aperçu ${active + 1}`}
                 fill
                 sizes="(max-width: 768px) 100vw, 896px"
                 className="object-cover"

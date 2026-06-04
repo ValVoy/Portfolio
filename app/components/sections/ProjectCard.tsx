@@ -172,7 +172,7 @@ export function ProjectCard({ project, lang, dict, priority = false }: ProjectCa
             rel="noopener noreferrer"
             className="font-body text-sm font-medium transition-opacity hover:opacity-70"
             style={{ color: 'var(--color-primary-fixed-dim)' }}
-            aria-label={`${dict.viewCode} — ${project.title}`}
+            aria-label={`${dict.viewCode} · ${project.title}`}
           >
             {dict.viewCode} →
           </a>
@@ -184,7 +184,7 @@ export function ProjectCard({ project, lang, dict, priority = false }: ProjectCa
             rel="noopener noreferrer"
             className="font-body text-sm font-medium transition-opacity hover:opacity-70"
             style={{ color: 'var(--color-tertiary)' }}
-            aria-label={`${dict.viewLive} — ${project.title}`}
+            aria-label={`${dict.viewLive} · ${project.title}`}
           >
             {dict.viewLive} ↗
           </a>
