@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2026-06-12
+
+### Added
+- **Projects:** Integrated "Studio Movimento CRM" (CRM_RAPH), a professional SaaS for creatives featuring multi-tenant isolation, AES-256-GCM encryption, and advanced project/finance tracking.
+- **Governance:** Comprehensive session audit for CRM_RAPH integration focusing on security, supply chain, and i18n consistency.
+
 ## [1.1.0] - 2026-04-15
 
 ### Added

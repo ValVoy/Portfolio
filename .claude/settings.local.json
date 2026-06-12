@@ -4,7 +4,30 @@
       "Read(//c/Users/vcher/Desktop/Appli_Maison/APP/LifeOS_v3/**)",
       "Read(//mnt/c/Users/vcher/Desktop/Appli_Maison/APP/**)",
       "Bash(cp \"C:/Users/vcher/Desktop/Appli_Maison/APP/LifeOS_v3/docs/snap/20_04_2026_dark_dashboard.png\" \"C:/Users/vcher/Desktop/Appli_Maison/APP/Portfolio/app/public/now/lifeos-dark.png\")",
-      "Bash(cp \"C:/Users/vcher/Desktop/Appli_Maison/APP/LifeOS_v3/docs/snap/20_04_2026_light_dashboard.png\" \"C:/Users/vcher/Desktop/Appli_Maison/APP/Portfolio/app/public/now/lifeos-light.png\")"
+      "Bash(cp \"C:/Users/vcher/Desktop/Appli_Maison/APP/LifeOS_v3/docs/snap/20_04_2026_light_dashboard.png\" \"C:/Users/vcher/Desktop/Appli_Maison/APP/Portfolio/app/public/now/lifeos-light.png\")",
+      "Bash(ls data/i18n)",
+      "Bash(ls data/*.ts)",
+      "Read(//c/Users/vcher/Desktop/Appli_Maison/**)",
+      "Bash(ls APP/LifeOS_v3)",
+      "Bash(ls SARAH)",
+      "Bash(ls SARAH/ope_cdm)",
+      "Bash(ls public/now)",
+      "Bash(ls public/projects)",
+      "Bash(ls public *)",
+      "Bash(ls public/screenshots)",
+      "Bash(ls public/og)",
+      "Bash(ls public/images)",
+      "Bash(findstr /I \"project image\")",
+      "Bash(npx playwright *)",
+      "Bash(node -e ' *)",
+      "Bash(wsl node *)",
+      "Bash(wsl npm *)",
+      "Bash(grep -vE \"^\\\\S+:\\\\s*\\(//|\\\\*|/\\\\*|\\\\{/\\\\*\\)\")",
+      "Bash(grep -vE \"\\\\{/\\\\*.*—.*\\\\*/\\\\}\")",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(wsl bash *)",
+      "Bash(git push *)"
     ]
   }
 }
