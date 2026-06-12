@@ -2,6 +2,29 @@ import type { Project } from './types'
 
 export const projects: Project[] = [
   {
+    id: 'crm-raph',
+    title: 'Studio Movimento CRM',
+    description: {
+      fr: "CRM ultra-moderne et sécurisé sur mesure pour Directrice Artistique & Webdesigner : gestion clients, projets, finances et portail de validation.",
+      en: "Ultra-modern and secure custom CRM for Art Directors & Webdesigners: client, project, finance management and validation portal.",
+    },
+    longDescription: {
+      fr: "CRM natif multi-tenant conçu pour automatiser le workflow complet d'un studio créatif (Studio Movimento). L'application gère les fiches clients riches (avec logos, notes et coffre-fort sécurisé), les projets complexes (relation N:N, ventilation des revenus), le suivi des tâches prioritaires et les rollups financiers en temps réel (budgets, devis, encaissements). Sécurité renforcée avec chiffrement AES-256-GCM des données sensibles, authentification maison (Bcrypt, sessions opaques) et architecture multi-tenant stricte via workspace_id. Stockage objet Cloudflare R2 pour les assets et maquettes. Développé en Next.js 15 avec React 19 et Tailwind v4.",
+      en: "Native multi-tenant CRM designed to automate the full workflow of a creative studio (Studio Movimento). The app handles rich client profiles (including logos, notes, and secure password vault), complex projects (N:N relationships, revenue sharing), priority task tracking, and real-time financial rollups (budgets, quotes, payments). Hardened security with AES-256-GCM encryption for sensitive data, custom authentication (Bcrypt, opaque sessions), and strict multi-tenant architecture via workspace_id. Cloudflare R2 object storage for assets and designs. Built with Next.js 15, React 19, and Tailwind v4.",
+    },
+    stack: ['Next.js 15', 'React 19', 'TypeScript', 'Tailwind v4', 'Framer Motion', 'Drizzle ORM', 'Turso', 'Cloudflare R2'],
+    role: 'fullstack',
+    status: 'in_progress',
+    image: '/projects/crm-raph-hub.webp',
+    images: [
+      '/projects/crm-raph-hub.webp',
+      '/projects/crm-raph.webp',
+    ],
+    teamProject: false,
+    featured: true,
+    year: 2026,
+  },
+  {
     id: 'ope-cdm',
     title: 'Pronos Coupe du Monde',
     description: {
