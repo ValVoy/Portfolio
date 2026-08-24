@@ -25,6 +25,18 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
+
+# URL publique du site, FIGEE dans le bundle au moment du build (lib/config.ts
+# et la route d'image OpenGraph des projets). Son absence ne casse rien de
+# visible : le repli code dans lib/config.ts est https://valentincheron.dev,
+# qui n'est pas le domaine de ce site. Constate le 24-08-2026 sur l'adresse
+# temporaire, ou sitemap.xml, robots.txt, les canoniques et les images
+# OpenGraph pointaient tous vers ce mauvais domaine. La valeur par defaut est
+# donc le vrai domaine, pour que l'image reste juste meme si personne ne
+# fournit l'argument de build.
+ARG NEXT_PUBLIC_SITE_URL="https://valentincheron.fr"
+ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
+
 RUN npm run build
 
 FROM node:24-slim AS runner
