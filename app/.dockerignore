@@ -1,0 +1,26 @@
+# Ce qui n'a rien a faire dans le contexte de build.
+# Sans ce fichier, le node_modules compile pour Windows part dans l'image et
+# ecrase celui de l'etage deps : le build echoue sur des binaires natifs
+# inutilisables.
+
+node_modules
+.next
+.git
+.github
+
+# Secrets : jamais dans le contexte de build, meme si le Dockerfile ne les copie pas.
+.env
+.env.*
+*.pem
+*.key
+
+# Sorties de test et d'outillage
+coverage
+tsconfig.tsbuildinfo
+.vscode
+.idea
+
+# Documentation et gouvernance : inutiles a la compilation.
+# Le site n'utilise pas de contenu MDX, donc aucune exception a prevoir ici.
+governance
+*.md

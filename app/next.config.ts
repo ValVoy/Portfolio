@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Sortie autonome pour le conteneur : Coolify lance `node server.js` sur
+  // .next/standalone. Sans cette ligne, ce dossier ne serait pas produit et
+  // le conteneur demarrerait sans serveur.
+  output: "standalone",
   compress: true,
   poweredByHeader: false,
   async headers() {
