@@ -173,16 +173,7 @@ Fichier `carnetdebord.md` à la **racine `Portfolio/`** (pas dans `app/`) — **
 
 ---
 
-## 12. Gestion du Contexte (RÈGLE ABSOLUE)
-
-- Surveiller le contexte EN PERMANENCE.
-- À ~65-70% : finir la tâche atomique en cours, mettre à jour `/governance/claude/claude_NN.md`, puis envoyer :
-  > "⚠️ Contexte à ~X% — j'ai sauvegardé. Lance `/compact` avant qu'on continue."
-- Ne jamais laisser le compact automatique se déclencher au milieu d'une tâche.
-
----
-
-## 13. Autonomie
+## 12. Autonomie
 
 - Edit/Write pour tous les fichiers de code.
 - Demander uniquement : **(1)** les commandes terminal (`npm install`, `npx`, etc.) et **(2)** les commits git.
